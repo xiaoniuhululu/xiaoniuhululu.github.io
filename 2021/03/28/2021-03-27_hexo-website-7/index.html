@@ -23,21 +23,25 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"xiaoniuhululu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiaoniuhululu.com/2021/04/22/hello-world/index.html">
+<meta property="og:title" content="个人网站7-自定义图标支持">
+<meta property="og:url" content="https://xiaoniuhululu.com/2021/03/28/2021-03-27_hexo-website-7/index.html">
 <meta property="og:site_name" content="小牛呼噜噜">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-21T16:27:54.706Z">
-<meta property="article:modified_time" content="2021-04-21T16:27:54.706Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-8/1617848606770-0372459df03d4fca41fb4987935193d.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616852777372-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-17/1610867438699-Snipaste_2021-01-17_14-50-16.png">
+<meta property="article:published_time" content="2021-03-27T16:33:32.000Z">
+<meta property="article:modified_time" content="2021-04-08T02:24:46.678Z">
 <meta property="article:author" content="小牛呼噜噜">
-<meta property="article:tag" content="linux, java, c++ , vue, hexo, 深度学习">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
+<meta property="article:tag" content="google">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-8/1617848606770-0372459df03d4fca41fb4987935193d.jpg">
 
 
-<link rel="canonical" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+<link rel="canonical" href="https://xiaoniuhululu.com/2021/03/28/2021-03-27_hexo-website-7/">
 
 
 <script class="page-configurations">
@@ -61,7 +65,7 @@
 
 
 
-<title>Hello World | 小牛呼噜噜</title>
+<title>个人网站7-自定义图标支持 | 小牛呼噜噜</title>
   
 
 
@@ -203,7 +207,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%9B%BE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">下载图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-config-yml"><span class="nav-number">2.</span> <span class="nav-text">修改主题配置文件_config.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E6%B3%A8%E5%85%A5%E5%8A%9F%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text">主题注入功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%EF%BC%88%E4%BE%A7%E8%BE%B9%E6%A0%8F%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">使用说明（侧边栏）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,7 +294,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/03/28/2021-03-27_hexo-website-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
@@ -303,7 +307,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          个人网站7-自定义图标支持
         </h1>
 
         <div class="post-meta-container">
@@ -316,7 +320,23 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-04-22 00:27:54" itemprop="dateCreated datePublished" datetime="2021-04-22T00:27:54+08:00">2021-04-22</time>
+      <time title="创建时间：2021-03-28 00:33:32" itemprop="dateCreated datePublished" datetime="2021-03-28T00:33:32+08:00">2021-03-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-08 10:24:46" itemprop="dateModified" datetime="2021-04-08T10:24:46+08:00">2021-04-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BB%BA%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">建站</span></a>
+        </span>
     </span>
 
   
@@ -327,7 +347,7 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
-    <span id="/2021/04/22/hello-world/" class="post-meta-item twikoo_visitors" data-flag-title="Hello World" title="阅读次数">
+    <span id="/2021/03/28/2021-03-27_hexo-website-7/" class="post-meta-item twikoo_visitors" data-flag-title="个人网站7-自定义图标支持" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -344,19 +364,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-8/1617848606770-0372459df03d4fca41fb4987935193d.jpg"></p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>Hexo NexT 原始主题是采用了 Font Awesome 图标，并未包含如微信公众号，知乎这些社交网站图标。</p>
+<h2 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h2><p>首先，前往 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">阿里巴巴矢量库</a> 挑选需要的图标，在图标上点击 “购物车” 将其加入购物车。</p>
+<p>选择「下载代码」，会将所有的图标一起下载下来<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616852777372-image.png"></p>
+<h2 id="修改主题配置文件-config-yml"><a href="#修改主题配置文件-config-yml" class="headerlink" title="修改主题配置文件_config.yml"></a>修改主题配置文件_config.yml</h2><p>将下载的文件解压后，在里面，找到 iconfont.css 文件，打开后将其中的所有内容都复制加入到主题 CSS 自定义文件<code>source\_data\styles.styl</code>   中的任意位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;自定义图标 font-class引用</span><br><span class="line"></span><br><span class="line">@font-face &#123;font-family: &quot;iconfont&quot;;</span><br><span class="line">  src: url(&#39;iconfont.eot?t&#x3D;1616849051933&#39;); &#x2F;* IE9 *&#x2F;</span><br><span class="line">  src: url(&#39;iconfont.eot?t&#x3D;1616849051933#iefix&#39;) format(&#39;embedded-opentype&#39;), &#x2F;* IE6-IE8 *&#x2F;</span><br><span class="line">  url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,d09GMgABAAAAAAQIAAsAAAAACEwAAAO5AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqEIIN+ATYCJAMMCwgABCAFhG0HSRtXBxHVmynJfiTYtnFSVsx&#x2F;DkRyF+lM8Py&#x2F;Tr1P+lEEYSgxqAQsly0XGCfAYUk3Q3limnocAFubUotQlRGKJTkPvsv&#x2F;SH4wwuVD18&#x2F;fz9dFAW6Wx2ZzqbjvLZuyMW2AA5sOqBurhDeQD+R&#x2F;GLvyIvZDAJsSaiGduvRyMVEYwwSQmdOmjMNMmVA1hYKJYJTMVcgOEjC1oFYGbPd&#x2F;L59oICZoJOgYY&#x2F;tN7jyRdm+S31q6F&#x2F;cY6RKQjecA2CLQgVqAAhld6hqKHkZroWMrSNVnGigEbaxAPI4vVXFjpf94GoiBgZIgtZpGOymZLYDAW0sCMc7fA0aP5stI+ggfAQ07qUDl5+daVrpty4rIm0Hh12707eDYu2lDzoRtPzokFhsUilQeci5qh8NuOJJoE0vMNDMm+IOjUUsdqBJBZmhQJGL0XNW03PeQl0WhKhRo5hgWysbi8q2PRpq7QxqfdUK5hyQWGxza6+3xzwXOu44kgY1rIu7b&#x2F;fytqr0b3IuN9&#x2F;cF9juyzgnb2OV076kqV049NQ3lyjnK+NP7P9oz9rlm5UkTuxrd7f6BdiOoMcienDz3X2+zxVHebkxfbc28GbwmrVwTD+IOjawytLLvVx5aZWSZ5a88zA&#x2F;q9pFVyqB&#x2F;WOVgEMpKWEOD&#x2F;rCLGBPujxpYsX&#x2F;5Vasr9Kvo3q04sEL&#x2F;Vav6VxhY8a5bsV+F1avK9684EFzELd9v9ep+5d2KuaOcE2ldA8OGME7Wzdbc1Lp9HuR07l9tScNscZ3JBdJ79pRq7VK+FXwralvQd2&#x2F;zFNfQtih1t7d3pev80f3Eldmjpat0mT3GlbQq+k+rRq2OqpP1MuOllfw&#x2F;4&#x2F;+CkJHyZUEy5QCIe0p077&#x2F;&#x2F;DYmND10fk9rqj+koAF5s6H7Yl7fzgPlW3AJ&#x2F;uUQB8bi6cIVh1pUstaV6QmeD&#x2F;Q7FUMwx&#x2F;m0xQAav+uPZrfNBMMmOQSORYtAxqURU1FqQgEMjMDBpCzY16brYIZP56IiygBpsACCkcR00UngEOmk8JirqS0gghy9gkCY62AyWzDUdqsg02+4oaBQ92B8kxztZVq2DwhuGczWSVPjsF0pJAeibLpuYcUcZY0J5h0GVgIQ3mMBhuK4Mh3BGp01UPca2pbI7NY63qqajoFH0YH+QHO&#x2F;kNtY69&#x2F;0bhnM1UlNVEX6hlNQ69E3XgjijvVXVtRxT3mFQJSDhDSbgwNWMMhzlvTI6bWKP8DG2qB61Rc38+PZ8cR5iDWNNXTTRRaEmFL9fP5i+aQ9sGf7R6RYNh9Psa6oqAAAA&#39;) format(&#39;woff2&#39;),</span><br><span class="line">  url(&#39;iconfont.woff?t&#x3D;1616849051933&#39;) format(&#39;woff&#39;),</span><br><span class="line">  url(&#39;iconfont.ttf?t&#x3D;1616849051933&#39;) format(&#39;truetype&#39;), &#x2F;* chrome, firefox, opera, Safari, Android, iOS 4.2+ *&#x2F;</span><br><span class="line">  url(&#39;iconfont.svg?t&#x3D;1616849051933#iconfont&#39;) format(&#39;svg&#39;); &#x2F;* iOS 4.1- *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;以下代码相对下载下来的代码做了部分修改</span><br><span class="line">.iconfont &#123;</span><br><span class="line">  font-family: &quot;iconfont&quot; !important;</span><br><span class="line">  font-size: inherit; &#x2F;&#x2F;修改！</span><br><span class="line">  font-style: normal;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.csdn:before &#123;</span><br><span class="line">  content: &quot;\e50d&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.weixin:before &#123; &#x2F;&#x2F;修改！</span><br><span class="line">  content: &quot;\e609&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="主题注入功能"><a href="#主题注入功能" class="headerlink" title="主题注入功能"></a>主题注入功能</h2><p>修改/themes/next/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> custom_file_path:</span><br><span class="line">-  #style: source&#x2F;_data&#x2F;styles.styl</span><br><span class="line">+  style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="使用说明（侧边栏）"><a href="#使用说明（侧边栏）" class="headerlink" title="使用说明（侧边栏）"></a>使用说明（侧边栏）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;user_id || fab fa-github</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  Zhihu: https:&#x2F;&#x2F;www.csdn.com&#x2F;people&#x2F;user_id || iconfont csdn</span><br><span class="line">  Douban: https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;user_id&#x2F; || iconfont douban</span><br></pre></td></tr></table></figure>
+<p>重新部署项目即可看到效果。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.dlzhang.com/posts/32/?highlight=hexo">https://blog.dlzhang.com/posts/32/?highlight=hexo</a></p>
+<hr>
+<p>本篇文章到这里就结束啦，如果喜欢的话，多多支持，欢迎关注！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-17/1610867438699-Snipaste_2021-01-17_14-50-16.png"></p>
 
     </div>
 
@@ -402,7 +427,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://xiaoniuhululu.com/2021/04/22/hello-world/" title="Hello World">https://xiaoniuhululu.com/2021/04/22/hello-world/</a>
+      <a href="https://xiaoniuhululu.com/2021/03/28/2021-03-27_hexo-website-7/" title="个人网站7-自定义图标支持">https://xiaoniuhululu.com/2021/03/28/2021-03-27_hexo-website-7/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -437,18 +462,23 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
+              <a href="/tags/google/" rel="tag"><i class="fa fa-tag"></i> google</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/14/2021-04-13_hexo-next7-collect/" rel="prev" title="个人建站合集（hexo+ next7）">
-                  <i class="fa fa-chevron-left"></i> 个人建站合集（hexo+ next7）
+                <a href="/2021/03/18/2021-02-26-hexo-website-ads-6/" rel="prev" title="个人网站6-深度定制网站样式和添加Google广告">
+                  <i class="fa fa-chevron-left"></i> 个人网站6-深度定制网站样式和添加Google广告
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/24/2021-04-24_springboot+mybatis%20plus/" rel="next" title="springboot2.4 整合mybatis-plus、mysql">
-                  springboot2.4 整合mybatis-plus、mysql <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/14/2021-04-13_hexo-next7-collect/" rel="next" title="个人建站合集（hexo+ next7）">
+                  个人建站合集（hexo+ next7） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

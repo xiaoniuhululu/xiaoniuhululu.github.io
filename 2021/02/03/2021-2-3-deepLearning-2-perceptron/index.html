@@ -23,21 +23,27 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"xiaoniuhululu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="以前学过人工智能算法，但是只是做了比较简单的项目像手写识别和猫狗识别等等，对算法掌握的比较浅显，一直以来特别想做一个能够做一个能够识别自己的小程序，感觉很酷，小牛希望通过这个项目继续深入学习研究相关算法，本系列文章仅记录笔者从小白开始的学习历程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiaoniuhululu.com/2021/04/22/hello-world/index.html">
+<meta property="og:title" content="python+tensorflow人脸识别（1）-深度学习基础概念">
+<meta property="og:url" content="https://xiaoniuhululu.com/2021/02/03/2021-2-3-deepLearning-2-perceptron/index.html">
 <meta property="og:site_name" content="小牛呼噜噜">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="以前学过人工智能算法，但是只是做了比较简单的项目像手写识别和猫狗识别等等，对算法掌握的比较浅显，一直以来特别想做一个能够做一个能够识别自己的小程序，感觉很酷，小牛希望通过这个项目继续深入学习研究相关算法，本系列文章仅记录笔者从小白开始的学习历程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-21T16:27:54.706Z">
-<meta property="article:modified_time" content="2021-04-21T16:27:54.706Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611814556028-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611844373679-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611847104061-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611848639387-image.png">
+<meta property="article:published_time" content="2021-02-03T10:43:57.000Z">
+<meta property="article:modified_time" content="2021-02-03T10:31:14.736Z">
 <meta property="article:author" content="小牛呼噜噜">
-<meta property="article:tag" content="linux, java, c++ , vue, hexo, 深度学习">
+<meta property="article:tag" content="tensorflow">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611814556028-image.png">
 
 
-<link rel="canonical" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+<link rel="canonical" href="https://xiaoniuhululu.com/2021/02/03/2021-2-3-deepLearning-2-perceptron/">
 
 
 <script class="page-configurations">
@@ -61,7 +67,7 @@
 
 
 
-<title>Hello World | 小牛呼噜噜</title>
+<title>python+tensorflow人脸识别（1）-深度学习基础概念 | 小牛呼噜噜</title>
   
 
 
@@ -203,7 +209,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">人脸识别是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">什么是深度学习？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%84%9F%E7%9F%A5%E5%99%A8%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">什么是感知器？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%90%91%E8%BF%90%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">前向运算</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,7 +296,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/02/03/2021-2-3-deepLearning-2-perceptron/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
@@ -303,7 +309,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          python+tensorflow人脸识别（1）-深度学习基础概念
         </h1>
 
         <div class="post-meta-container">
@@ -315,8 +321,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-22 00:27:54" itemprop="dateCreated datePublished" datetime="2021-04-22T00:27:54+08:00">2021-04-22</time>
+      <time title="创建时间：2021-02-03 18:43:57 / 修改时间：18:31:14" itemprop="dateCreated datePublished" datetime="2021-02-03T18:43:57+08:00">2021-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+        </span>
     </span>
 
   
@@ -327,7 +343,7 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
-    <span id="/2021/04/22/hello-world/" class="post-meta-item twikoo_visitors" data-flag-title="Hello World" title="阅读次数">
+    <span id="/2021/02/03/2021-2-3-deepLearning-2-perceptron/" class="post-meta-item twikoo_visitors" data-flag-title="python+tensorflow人脸识别（1）-深度学习基础概念" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -344,19 +360,51 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>以前学过人工智能算法，但是只是做了比较简单的项目像手写识别和猫狗识别等等，对算法掌握的比较浅显，一直以来特别想做一个能够做一个能够识别自己的小程序，感觉很酷，小牛希望通过这个项目继续深入学习研究相关算法，本系列文章仅记录笔者从小白开始的学习历程。</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+<h2 id="人脸识别是什么？"><a href="#人脸识别是什么？" class="headerlink" title="人脸识别是什么？"></a>人脸识别是什么？</h2><p>人脸识别，特指利用分析比较人脸视觉特征信息进行身份鉴别的计算机技术。用摄像机或摄像头采集含有人脸的图像或视频流，并自动在图像中检测和跟踪人脸，进而对检测到的人脸进行脸部识别的一系列相关技术，通常也叫做人像识别、面部识别。</p>
+<p>查阅相关资料发现，人脸识别的关键点是：目标检测，关键点定位，活体检测，相识度度量，人脸属性回归</p>
+<h2 id="什么是深度学习？"><a href="#什么是深度学习？" class="headerlink" title="什么是深度学习？"></a>什么是深度学习？</h2><p>关于深度学习的前世今生，深度学习属于机器学习的一个分支，机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。机器学习在近30多年已发展为一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、计算复杂性理论等多门学科。</p>
+<p>目前我们人类所讲的人工智能，其实是弱人工智能，其不是能够能真正地推理和解决问题的智能机器，其实是只不过“看起来”像是智能的，也不会有自主意识。<br>我们通过给它大量的训练数据，让它去学习其这些数据内在的特征和关系，使其能够处理类似训练数据的实际问题。</p>
+<p>机器学习中有许多经典的算法，其中有一个叫 人工神经网络 的算法，隐藏层比较多（大于2）的神经网络叫做深度神经网络。而深度学习，就是使用深层架构（比如，深度神经网络）的机器学习方法。深度学习通俗点讲就是神经网络的升级版。</p>
+<p>这里简单介绍一下相关概念，大家感兴趣，可以去看一下<a target="_blank" rel="noopener" href="http://open.163.com/newview/movie/courseintro?newurl=M6SGF6VB4">斯坦福大学公开课:机器学习课程</a>或者这篇<a target="_blank" rel="noopener" href="https://www.cnblogs.com/subconscious/p/4107357.html">文章</a>（小牛感觉写的太牛了，有种通透的赶脚~~）</p>
+<p>神经网络如图所示：输入层、隐藏层、输出层</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611814556028-image.png"></p>
+<p>（图片来源网络，侵删）</p>
+<h2 id="什么是感知器？"><a href="#什么是感知器？" class="headerlink" title="什么是感知器？"></a>什么是感知器？</h2><p>感知器（英语：Perceptron）是Frank Rosenblatt在1957年就职于康奈尔航空实验室（Cornell Aeronautical Laboratory）时所发明的一种人工神经网络。它可以被视为一种最简单形式的前馈神经网络，是一种二元线性分类器。</p>
+<p>神经网络的组成单元——神经元。神经元也叫做感知器。</p>
+<p>感知器有如下部分：输入权值，激活函数，输出</p>
+<ul>
+<li>输出权值：一个感知器可以接收多个输入$x_1$,$x_2$… ，一个输入上有一个权值$W_i$，此外还有一个偏置项b。</li>
+<li>激活函数：感知器的激活函数可以有很多选择，我们选择这个经典的阶跃函数来作为激活函数：</li>
+</ul>
+<p>$$f(z) = \begin{cases}<br>1 &amp; z &gt; 0 \<br>0 &amp; z&lt;=0<br>\end{cases}$$</p>
+<ul>
+<li>输出：$y=f(w * x + b)$</li>
+</ul>
+<p>任何线性分类或线性回归问题，都可以用感知器来解决</p>
+<p>多层感知器(MLP)也称人工神经网络(ANN)</p>
+<p>深度学习中的概念变迁：神经元-&gt;感知器-&gt;神经网络-&gt;深度学习</p>
+<h2 id="前向运算"><a href="#前向运算" class="headerlink" title="前向运算"></a>前向运算</h2><p>神经网络的前向运算，就是给定一组输入，计算输出的过程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611844373679-image.png"></p>
+<p>对于前向传播来说，不管维度多高，其过程都可以用如下公式表示：</p>
+<p>假设上一层结点输入1，输入2，输入3,…等一些结点与本层的结点有连接，那么本层结点的值就是通过上一层的输入1，输入2，输入3结点以及对应的连接权值进行加权和运算，最终结果再加上一个偏置项（图中为了简单省略了），最后在通过一个非线性函数（即激活函数），如ReLu，sigmoid等函数，最后得到的结果就是本层结点的输出。<br>最终不断的通过这种方法一层层的运算，得到输出层结果。</p>
+<p>$a^2=$ σ($z^2$) = σ($a^1$* $w^2$+$b^2$)</p>
+<p>其中，上标代表层数，星号表示卷积，b表示偏置项bias，σ 表示激活函数。</p>
+<p>假设我们构造了一个神经网络如下图：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611847104061-image.png"></p>
+<p>公式如下：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-28/1611848639387-image.png"></p>
+<p>其中f函数是本图规定的算法，Wij就是相邻两层神经元之间的权值，$a_1^2$是对x1,x2,x3进行线性组合，$a_1^3$是都$a_1^2$，$a_2^2$，$a_3^2$的线性组合</p>
+<p>如何计算每层权值与偏值，f函数该如何定义，已知具体哪层，求其层的参数是多少？后面文章会一一道来。</p>
+<p>明天再继续，概念还是挺抽象的，把概念写明白还是挺累的，脑袋要炸了。</p>
+<p>本篇文章到这里就结束啦，如果喜欢的话，多多支持，欢迎关注！</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jiqizhixin.com/graph/technologies/f9849d6c-6262-4c1f-8f42-6d976be17161">https://www.jiqizhixin.com/graph/technologies/f9849d6c-6262-4c1f-8f42-6d976be17161</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zybuluo.com/hanbingtao/note/433855">https://www.zybuluo.com/hanbingtao/note/433855</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/news/390591">https://cloud.tencent.com/developer/news/390591</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bitcarmanlee/article/details/78819025">https://blog.csdn.net/bitcarmanlee/article/details/78819025</a></p>
+<hr>
+<p>本篇文章到这里就结束啦，如果喜欢的话，多多支持，欢迎关注！</p>
 
     </div>
 
@@ -402,7 +450,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://xiaoniuhululu.com/2021/04/22/hello-world/" title="Hello World">https://xiaoniuhululu.com/2021/04/22/hello-world/</a>
+      <a href="https://xiaoniuhululu.com/2021/02/03/2021-2-3-deepLearning-2-perceptron/" title="python+tensorflow人脸识别（1）-深度学习基础概念">https://xiaoniuhululu.com/2021/02/03/2021-2-3-deepLearning-2-perceptron/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -437,18 +485,22 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/tensorflow/" rel="tag"><i class="fa fa-tag"></i> tensorflow</a>
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/14/2021-04-13_hexo-next7-collect/" rel="prev" title="个人建站合集（hexo+ next7）">
-                  <i class="fa fa-chevron-left"></i> 个人建站合集（hexo+ next7）
+                <a href="/2021/02/03/2021-2-3-deepLearning-1-reverse-operation/" rel="prev" title="人脸识别（2）-反向传播（BP）">
+                  <i class="fa fa-chevron-left"></i> 人脸识别（2）-反向传播（BP）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/24/2021-04-24_springboot+mybatis%20plus/" rel="next" title="springboot2.4 整合mybatis-plus、mysql">
-                  springboot2.4 整合mybatis-plus、mysql <i class="fa fa-chevron-right"></i>
+                <a href="/2021/02/03/2021-2-3-wechat-status/" rel="next" title="微信8.0状态视频无水印素材+个人设置技巧（最全小白教程）">
+                  微信8.0状态视频无水印素材+个人设置技巧（最全小白教程） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

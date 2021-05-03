@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CLong+Cang:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CEB+Garamond:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"xiaoniuhululu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot2.4 整合mybatis-plus、mysql">
+<meta property="og:url" content="https://xiaoniuhululu.com/2021/04/24/2021-04-24_springboot+mybatis%20plus/index.html">
+<meta property="og:site_name" content="小牛呼噜噜">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619278278493-IMG_20210411_212955.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619237201814-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619237594103-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619241854220-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619244354285-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619256959065-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-17/1610867438699-Snipaste_2021-01-17_14-50-16.png">
+<meta property="article:published_time" content="2021-04-23T16:33:32.000Z">
+<meta property="article:modified_time" content="2021-04-24T15:32:30.209Z">
+<meta property="article:author" content="小牛呼噜噜">
+<meta property="article:tag" content="springboot">
+<meta property="article:tag" content="mybatis plus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619278278493-IMG_20210411_212955.jpg">
+
+
+<link rel="canonical" href="https://xiaoniuhululu.com/2021/04/24/2021-04-24_springboot+mybatis%20plus/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<script data-ad-client="ca-pub-6335519754868836" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<meta name="google-site-verification" content="PtAVgP6v1jRvGzGkSHVLhY9VqQEE0fs4MxlbAA-jjaw" />
+
+
+
+
+
+
+
+
+
+<title>springboot2.4 整合mybatis-plus、mysql | 小牛呼噜噜</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="/js/cursor/love.js"></script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">小牛呼噜噜</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">爱喝可乐</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="nav-number">1.</span> <span class="nav-text">添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">编写配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E5%BB%BAMybatisPlusConfig"><span class="nav-number">3.</span> <span class="nav-text">新建MybatisPlusConfig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="nav-number">4.</span> <span class="nav-text">代码生成</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小牛呼噜噜"
+      src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <p class="site-author-name" itemprop="name">小牛呼噜噜</p>
+  <div class="site-description" itemprop="description">微信公众号: 小牛呼噜噜</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610355881211-qrcode_for_gh_da14b067e711_344.jpg" title="公众号 → https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zj827622690&#x2F;MyBlogImageBed&#x2F;2021-1-11&#x2F;1610355881211-qrcode_for_gh_da14b067e711_344.jpg" rel="noopener" target="_blank"><i class="iconfont weixin fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_41603102" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41603102" rel="noopener" target="_blank"><i class="iconfont csdn fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaoniuhululu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xiaoniuhululu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://gitee.com/zj827622690" class="github-corner" title="Follow me on Gitee" aria-label="Follow me on Gitee" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/04/24/2021-04-24_springboot+mybatis%20plus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+      <meta itemprop="name" content="小牛呼噜噜">
+      <meta itemprop="description" content="微信公众号: 小牛呼噜噜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小牛呼噜噜">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          springboot2.4 整合mybatis-plus、mysql
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-24 00:33:32 / 修改时间：23:32:30" itemprop="dateCreated datePublished" datetime="2021-04-24T00:33:32+08:00">2021-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">个人网站</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span id="/2021/04/24/2021-04-24_springboot+mybatis%20plus/" class="post-meta-item twikoo_visitors" data-flag-title="springboot2.4 整合mybatis-plus、mysql" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="twikoo_visitors"></span>
+    </span>
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619278278493-IMG_20210411_212955.jpg"></p>
+<span id="more"></span>
+
+<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--        mp--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.baomidou&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis-plus-boot-starter&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.4.2&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;!--        代码生成器--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.baomidou&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis-plus-generator&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;3.4.0&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;!--        模板引擎--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.freemarker&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.3.31&lt;&#x2F;version&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;!--        热部署插件--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-devtools&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;scope&gt;runtime&lt;&#x2F;scope&gt;</span><br><span class="line">            &lt;optional&gt;true&lt;&#x2F;optional&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;!--        mysql driver--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;scope&gt;runtime&lt;&#x2F;scope&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;!--        简化代码的工具--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.projectlombok&lt;&#x2F;groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;lombok&lt;&#x2F;artifactId&gt;</span><br><span class="line">            &lt;optional&gt;true&lt;&#x2F;optional&gt;</span><br><span class="line">        &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h2><p>当application.yml 和 application.properties 两个文件同时存在的时候，application.properties的优先级是高于application.yml的。</p>
+<blockquote>
+<p>但是由于propertie的配置文件含中文时读取会乱码，而在yml中不会。故选用yml</p>
+</blockquote>
+<p>application.yml:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:&#x2F;&#x2F;mysql:3306&#x2F;blog?useUnicode&#x3D;true&amp;useSSL&#x3D;false&amp;characterEncoding&#x3D;utf8&amp;serverTimezone&#x3D;Asia&#x2F;Shanghai</span><br><span class="line">    username: root</span><br><span class="line">    password: admin</span><br><span class="line">mybatis-plus:</span><br><span class="line">  mapper-locations: classpath*:&#x2F;mapper&#x2F;**Mapper.xml</span><br><span class="line">  configuration: </span><br><span class="line">    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #控制台打印完整带参数SQL语句</span><br></pre></td></tr></table></figure>
+
+<p>上面除了配置数据库的信息，还配置了myabtis plus的mapper的xml文件的扫描路径。</p>
+<h2 id="新建MybatisPlusConfig"><a href="#新建MybatisPlusConfig" class="headerlink" title="新建MybatisPlusConfig"></a>新建MybatisPlusConfig</h2><p>开启<code>mapper</code>接口扫描，添加分页插件<code>PaginationInterceptor</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import com.baomidou.mybatisplus.annotation.DbType;</span><br><span class="line">import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;</span><br><span class="line">import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;</span><br><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line"></span><br><span class="line">public class MybatisPlusConfig &#123;</span><br><span class="line">    &#x2F;*&#x2F;&#x2F; 旧版</span><br><span class="line">    @Bean</span><br><span class="line">    public PaginationInterceptor paginationInterceptor() &#123;</span><br><span class="line">        PaginationInterceptor paginationInterceptor &#x3D; new PaginationInterceptor();</span><br><span class="line">        &#x2F;&#x2F; 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false</span><br><span class="line">        &#x2F;&#x2F; paginationInterceptor.setOverflow(false);</span><br><span class="line">        &#x2F;&#x2F; 设置最大单页限制数量，默认 500 条，-1 不受限制</span><br><span class="line">        &#x2F;&#x2F; paginationInterceptor.setLimit(500);</span><br><span class="line">        &#x2F;&#x2F; 开启 count 的 join 优化,只针对部分 left join</span><br><span class="line">        paginationInterceptor.setCountSqlParser(new JsqlParserCountOptimize(true));</span><br><span class="line">        return paginationInterceptor;</span><br><span class="line">    &#125;*&#x2F;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 最新版</span><br><span class="line">    @Bean</span><br><span class="line">    public MybatisPlusInterceptor mybatisPlusInterceptor() &#123;</span><br><span class="line">        MybatisPlusInterceptor interceptor &#x3D; new MybatisPlusInterceptor();</span><br><span class="line">        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));</span><br><span class="line">        return interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码生成"><a href="#代码生成" class="headerlink" title="代码生成"></a>代码生成</h2><p>官方给我们提供了一个代码生成器，然后我们写上自己的参数之后，就可以直接根据数据库表信息生成entity、service、mapper等接口和实现类。（使用plus不就是为了偷懒嘛··）</p>
+<p>从mybatis plus官网捞个代码生成器<code>CodeGenerator</code>，然后根据自己的项目改一下配置即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line">package com.xiaoniu.blog;</span><br><span class="line"></span><br><span class="line">import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;</span><br><span class="line">import com.baomidou.mybatisplus.core.toolkit.StringPool;</span><br><span class="line">import com.baomidou.mybatisplus.core.toolkit.StringUtils;</span><br><span class="line">import com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line">import com.baomidou.mybatisplus.generator.InjectionConfig;</span><br><span class="line">import com.baomidou.mybatisplus.generator.config.*;</span><br><span class="line">import com.baomidou.mybatisplus.generator.config.po.TableInfo;</span><br><span class="line">import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;</span><br><span class="line">import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中</span><br><span class="line">public class CodeGenerator &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * &lt;p&gt;</span><br><span class="line">     * 读取控制台内容</span><br><span class="line">     * &lt;&#x2F;p&gt;</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public static String scanner(String tip) &#123;</span><br><span class="line">        Scanner scanner &#x3D; new Scanner(System.in);</span><br><span class="line">        StringBuilder help &#x3D; new StringBuilder();</span><br><span class="line">        help.append(&quot;请输入&quot; + tip + &quot;：&quot;);</span><br><span class="line">        System.out.println(help.toString());</span><br><span class="line">        if (scanner.hasNext()) &#123;</span><br><span class="line">            String ipt &#x3D; scanner.next();</span><br><span class="line">            if (StringUtils.isNotBlank(ipt)) &#123;</span><br><span class="line">                return ipt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        throw new MybatisPlusException(&quot;请输入正确的&quot; + tip + &quot;！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F; 代码生成器</span><br><span class="line">        AutoGenerator mpg &#x3D; new AutoGenerator();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 全局配置</span><br><span class="line">        GlobalConfig gc &#x3D; new GlobalConfig();</span><br><span class="line">        String projectPath &#x3D; System.getProperty(&quot;user.dir&quot;);</span><br><span class="line">        gc.setOutputDir(projectPath + &quot;&#x2F;src&#x2F;main&#x2F;java&quot;);</span><br><span class="line">        gc.setAuthor(&quot;关注公众号：小牛呼噜噜&quot;);</span><br><span class="line">        gc.setOpen(false);</span><br><span class="line">        &#x2F;&#x2F; gc.setSwagger2(true); 实体属性 Swagger2 注解</span><br><span class="line">        gc.setServiceName(&quot;%sService&quot;);</span><br><span class="line">        mpg.setGlobalConfig(gc);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 数据源配置</span><br><span class="line">        DataSourceConfig dsc &#x3D; new DataSourceConfig();</span><br><span class="line">        dsc.setUrl(&quot;jdbc:mysql:&#x2F;&#x2F;121.5.225.106:3306&#x2F;blog?useUnicode&#x3D;true&amp;useSSL&#x3D;false&amp;characterEncoding&#x3D;utf8&amp;serverTimezone&#x3D;UTC&quot;);</span><br><span class="line">        &#x2F;&#x2F; dsc.setSchemaName(&quot;public&quot;);</span><br><span class="line">        dsc.setDriverName(&quot;com.mysql.cj.jdbc.Driver&quot;);</span><br><span class="line">        dsc.setUsername(&quot;root&quot;);</span><br><span class="line">        dsc.setPassword(&quot;Zj@123456.&quot;);</span><br><span class="line">        mpg.setDataSource(dsc);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 包配置</span><br><span class="line">        PackageConfig pc &#x3D; new PackageConfig();</span><br><span class="line">        pc.setModuleName(null);&#x2F;&#x2F;模块名</span><br><span class="line">        pc.setParent(&quot;com.xiaoniu.blog&quot;);&#x2F;&#x2F;包名</span><br><span class="line">        mpg.setPackageInfo(pc);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 自定义配置</span><br><span class="line">        InjectionConfig cfg &#x3D; new InjectionConfig() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void initMap() &#123;</span><br><span class="line">                &#x2F;&#x2F; to do nothing</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 如果模板引擎是 freemarker</span><br><span class="line">        String templatePath &#x3D; &quot;&#x2F;templates&#x2F;mapper.xml.ftl&quot;;</span><br><span class="line">        &#x2F;&#x2F; 如果模板引擎是 velocity</span><br><span class="line">        &#x2F;&#x2F; String templatePath &#x3D; &quot;&#x2F;templates&#x2F;mapper.xml.vm&quot;;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 自定义输出配置</span><br><span class="line">        List&lt;FileOutConfig&gt; focList &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F; 自定义配置会被优先输出</span><br><span class="line">        focList.add(new FileOutConfig(templatePath) &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public String outputFile(TableInfo tableInfo) &#123;</span><br><span class="line">                &#x2F;&#x2F; 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！</span><br><span class="line">                return projectPath + &quot;&#x2F;src&#x2F;main&#x2F;resources&#x2F;mapper&#x2F;&quot;</span><br><span class="line">                        + &quot;&#x2F;&quot; + tableInfo.getEntityName() + &quot;Mapper&quot; + StringPool.DOT_XML;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        cfg.setFileOutConfigList(focList);</span><br><span class="line">        mpg.setCfg(cfg);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 配置模板</span><br><span class="line">        TemplateConfig templateConfig &#x3D; new TemplateConfig();</span><br><span class="line">        templateConfig.setXml(null);</span><br><span class="line">        mpg.setTemplate(templateConfig);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 策略配置</span><br><span class="line">        StrategyConfig strategy &#x3D; new StrategyConfig();</span><br><span class="line">        strategy.setNaming(NamingStrategy.underline_to_camel);</span><br><span class="line">        strategy.setColumnNaming(NamingStrategy.underline_to_camel);</span><br><span class="line">        strategy.setEntityLombokModel(true);</span><br><span class="line">        strategy.setRestControllerStyle(true);</span><br><span class="line">        strategy.setInclude(scanner(&quot;表名，多个英文逗号分割&quot;).split(&quot;,&quot;));</span><br><span class="line">        strategy.setControllerMappingHyphenStyle(true);</span><br><span class="line">        &#x2F;&#x2F;自定义</span><br><span class="line">&#x2F;&#x2F;        strategy.setTablePrefix(&quot;m_&quot;);</span><br><span class="line">        mpg.setStrategy(strategy);</span><br><span class="line">        mpg.setTemplateEngine(new FreemarkerTemplateEngine());</span><br><span class="line">        mpg.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后我们数据库中新建了一个user表：（注意 编码是 utf8mb4）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;user&#96; (</span><br><span class="line">  &#96;user_id&#96; bigint(100) NOT NULL COMMENT &#39;用户id(主键，雪花算法)&#39;,</span><br><span class="line">  &#96;username&#96; varchar(255) DEFAULT NULL COMMENT &#39;用户名&#39;,</span><br><span class="line">  &#96;avatar&#96; varchar(255) DEFAULT NULL COMMENT &#39;用户头像&#39;,</span><br><span class="line">  &#96;email&#96; varchar(255) DEFAULT NULL COMMENT &#39;用户邮箱&#39;,</span><br><span class="line">  &#96;nickname&#96; varchar(255) DEFAULT NULL COMMENT &#39;昵称&#39;,</span><br><span class="line">  &#96;password&#96; varchar(255) DEFAULT NULL COMMENT &#39;密码（游客不需要密码）&#39;,</span><br><span class="line">  &#96;role&#96; int(10) DEFAULT NULL COMMENT &#39;用户权限（0 admin; 1 普通用户; 2 游客）&#39;,</span><br><span class="line">  &#96;create_time&#96; datetime(6) DEFAULT NULL COMMENT &#39;创建时间&#39;,</span><br><span class="line">  &#96;update_time&#96; datetime(6) DEFAULT NULL COMMENT &#39;修改时间&#39;,</span><br><span class="line">  &#96;last_login_time&#96; datetime(6) DEFAULT NULL COMMENT &#39;上次登陆时间&#39;,</span><br><span class="line">  &#96;login_time&#96; datetime(6) DEFAULT NULL COMMENT &#39;当前登陆时间&#39;,</span><br><span class="line">  &#96;status&#96; int(10) DEFAULT NULL COMMENT &#39;用户状态（10正常，20挂起，30注销，40锁定）&#39;,</span><br><span class="line">  &#96;delete_sign&#96; int(10) DEFAULT NULL COMMENT &#39;删除标志（0未删除,1已删除&#39;,</span><br><span class="line">  PRIMARY KEY (&#96;user_id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8mb4;</span><br></pre></td></tr></table></figure>
+
+<p>最后运行CodeGenerator的main方法，输入表名：m_user，生成结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619237201814-image.png"></p>
+<p>结果:<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619237594103-image.png"></p>
+<p>#写一个测试方法</p>
+<p>首先往数据库表中，手动插入一条记录<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619241854220-image.png"></p>
+<p>编写controller方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;&#x2F;user&quot;)</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    UserService userService;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserMapper userMapper;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @GetMapping(&quot;&#x2F;&#123;id&#125;&quot;)</span><br><span class="line">    public Object test(@PathVariable(&quot;id&quot;) Long id) &#123;</span><br><span class="line">        QueryWrapper&lt;User&gt; queryWrapper &#x3D; new QueryWrapper&lt;&gt;();</span><br><span class="line">        queryWrapper.eq(&quot;user_id&quot;,id);</span><br><span class="line">        User user &#x3D; userMapper.selectOne(queryWrapper);</span><br><span class="line">        System.out.println(user);</span><br><span class="line">        return user;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>启动项目，报错：</p>
+<blockquote>
+<p>Error creating bean with name ‘userServiceImpl’: Unsatisfied dependency expressed through field </p>
+</blockquote>
+<p>小牛检查发现，自动生成的mapper文件里，缺少一个注解<code>@Mapper</code>，补上即可（不知道，是不是我代码生成器 哪里配错了，毕竟第一次用MP,如果有人知道留言提醒我一下）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619244354285-image.png"></p>
+<p>运行结果：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-24/1619256959065-image.png"></p>
+<hr>
+<p>本篇文章到这里就结束啦，如果喜欢的话，多多支持，欢迎关注！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-17/1610867438699-Snipaste_2021-01-17_14-50-16.png"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://baomidou.com/guide/quick-start.html">https://baomidou.com/guide/quick-start.html</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Bottom Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6335519754868836"
+     data-ad-slot="6232297866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          <div class="reward-container">
+  <div>请作者喝杯咖啡☕~</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442166560-image.png" alt="小牛呼噜噜 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442122383-image.png" alt="小牛呼噜噜 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>小牛呼噜噜
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://xiaoniuhululu.com/2021/04/24/2021-04-24_springboot+mybatis%20plus/" title="springboot2.4 整合mybatis-plus、mysql">https://xiaoniuhululu.com/2021/04/24/2021-04-24_springboot+mybatis plus/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/qq_41603102">
+          <span class="icon">
+            <i class="fab fa-telegram"></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610443337569-qrcode_for_gh_da14b067e711_258.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/springboot/" rel="tag"><i class="fa fa-tag"></i> springboot</a>
+              <a href="/tags/mybatis-plus/" rel="tag"><i class="fa fa-tag"></i> mybatis plus</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/22/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments"><div id="twikoo-comments"></div></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备2021011886号-1 </a>
+      <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616856436253-%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="display: inline-block;"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010402001118" rel="noopener" target="_blank">32010402001118 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小牛呼噜噜</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script>
+NexT.utils.loadComments('#twikoo-comments', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js', () => {
+    twikoo.init(Object.assign({"enable":true,"visitor":true,"envId":"comment-8grebgpd57d10560"}, {
+      el: '#twikoo-comments'
+    }));
+  }, window.twikoo);
+});
+</script>
+
+</body>
+</html>

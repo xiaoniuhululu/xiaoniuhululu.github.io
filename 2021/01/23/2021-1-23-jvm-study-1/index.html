@@ -23,21 +23,24 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"xiaoniuhululu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="最近在看JVM相关的书籍和网上相关的文章，抽空写了些文章，整理并加入自己的理解。 1.1 JVM是什么JVM是Java Virtual Machine的缩写。它是一种基于计算设备的规范，是一台虚拟机，即虚构的计算机。通俗点讲，JVM是用于运行JAVA字节码的虚拟机。 JVM运行在操作系统之上，不与计算机直接交互，屏蔽了具体操作系统平台的信息。当然，JVM执行字节码时实际上还是要解释成具体操作平台的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xiaoniuhululu.com/2021/04/22/hello-world/index.html">
+<meta property="og:title" content="JVM从入门到放弃(1)">
+<meta property="og:url" content="https://xiaoniuhululu.com/2021/01/23/2021-1-23-jvm-study-1/index.html">
 <meta property="og:site_name" content="小牛呼噜噜">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="最近在看JVM相关的书籍和网上相关的文章，抽空写了些文章，整理并加入自己的理解。 1.1 JVM是什么JVM是Java Virtual Machine的缩写。它是一种基于计算设备的规范，是一台虚拟机，即虚构的计算机。通俗点讲，JVM是用于运行JAVA字节码的虚拟机。 JVM运行在操作系统之上，不与计算机直接交互，屏蔽了具体操作系统平台的信息。当然，JVM执行字节码时实际上还是要解释成具体操作平台的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-21T16:27:54.706Z">
-<meta property="article:modified_time" content="2021-04-21T16:27:54.706Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-15/1610715288726-image.png">
+<meta property="article:published_time" content="2021-01-23T15:49:21.000Z">
+<meta property="article:modified_time" content="2021-01-23T15:52:20.761Z">
 <meta property="article:author" content="小牛呼噜噜">
-<meta property="article:tag" content="linux, java, c++ , vue, hexo, 深度学习">
+<meta property="article:tag" content="JVM">
+<meta property="article:tag" content="JAVA基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-15/1610715288726-image.png">
 
 
-<link rel="canonical" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+<link rel="canonical" href="https://xiaoniuhululu.com/2021/01/23/2021-1-23-jvm-study-1/">
 
 
 <script class="page-configurations">
@@ -61,7 +64,7 @@
 
 
 
-<title>Hello World | 小牛呼噜噜</title>
+<title>JVM从入门到放弃(1) | 小牛呼噜噜</title>
   
 
 
@@ -203,7 +206,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-JVM%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">1.1 JVM是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-JVM%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">1.2 JVM的主要组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-JVM%E7%9A%84%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F"><span class="nav-number">3.</span> <span class="nav-text">1.3 JVM的内存区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">1.4 多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-Java%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="nav-number">5.</span> <span class="nav-text">1.5 Java垃圾回收</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,7 +293,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/04/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/01/23/2021-1-23-jvm-study-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
@@ -303,7 +306,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          JVM从入门到放弃(1)
         </h1>
 
         <div class="post-meta-container">
@@ -315,8 +318,18 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-04-22 00:27:54" itemprop="dateCreated datePublished" datetime="2021-04-22T00:27:54+08:00">2021-04-22</time>
+      <time title="创建时间：2021-01-23 23:49:21 / 修改时间：23:52:20" itemprop="dateCreated datePublished" datetime="2021-01-23T23:49:21+08:00">2021-01-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JAVA%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">JAVA面试</span></a>
+        </span>
     </span>
 
   
@@ -327,7 +340,7 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
-    <span id="/2021/04/22/hello-world/" class="post-meta-item twikoo_visitors" data-flag-title="Hello World" title="阅读次数">
+    <span id="/2021/01/23/2021-1-23-jvm-study-1/" class="post-meta-item twikoo_visitors" data-flag-title="JVM从入门到放弃(1)" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -344,19 +357,81 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>最近在看JVM相关的书籍和网上相关的文章，抽空写了些文章，整理并加入自己的理解。</p>
+<h2 id="1-1-JVM是什么"><a href="#1-1-JVM是什么" class="headerlink" title="1.1 JVM是什么"></a>1.1 JVM是什么</h2><p>JVM是Java Virtual Machine的缩写。它是一种基于计算设备的规范，是一台虚拟机，即虚构的计算机。通俗点讲，JVM是用于运行JAVA字节码的虚拟机。</p>
+<p>JVM运行在操作系统之上，不与计算机直接交互，屏蔽了具体操作系统平台的信息。当然，JVM执行字节码时实际上还是要解释成具体操作平台的机器指令的。</p>
+<p>通过JVM，Java实现了平台无关性，Java语言在不同平台运行时不需要重新编译，只需要在该平台上部署JVM就可以了。因而能实现一次编译多处运行。</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>java程序的具体运算过程是：</p>
+<ul>
+<li>（1）：将java源码(.java文件)通过编译器编译成.class文件（字节码文件）</li>
+<li>（2）：JVM将字节码文件编译成相应操作系统的机器码</li>
+<li>（3）：机器码调用相应操作系统的本地方法库执行相应的方法</li>
+</ul>
+<h2 id="1-2-JVM的主要组成部分"><a href="#1-2-JVM的主要组成部分" class="headerlink" title="1.2 JVM的主要组成部分"></a>1.2 JVM的主要组成部分</h2><ol>
+<li>类加载器（ClassLoader）</li>
+<li>执行引擎（Execution Engine）</li>
+<li>本地库接口（Native Interface）</li>
+<li>运行时数据区（Runtime Data Area）</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-15/1610715288726-image.png"></p>
+<p>接下来我们来看以上4个主要组成部分的用途。</p>
+<p>类加载器：用于子系统将编译好的.class文件加载到JVM中</p>
+<p>执行引擎：包括<strong>即时编译器</strong>和<strong>垃圾回收器</strong>，即时编译器将Java字节码编译成具体的机器码，垃圾回收器用于回收在运行过程中不再使用的对象。</p>
+<p>本地库接口：用于调用操作系统的本地方法库，完成具体的指令操作</p>
+<p>运行时数据区：用于储存在JVM运行过程中产生的数据，其中包括</p>
+<blockquote>
+<p>程序计数器（Program Counter Register）：<strong>内存私有，无内存泄漏的问题</strong></p>
+</blockquote>
+<p>程序计数器是一块较小的内存空间，它可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里，字节码解析器的工作是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。</p>
+<p>由于jvm的多线程是通过线程轮流切换并分配处理器执行时间的方式来实现的，也就是任何时刻，一个处理器（或者说一个内核）都只会执行一条线程中的指令。因此为了线程切换后能恢复到正确的执行位置，每个线程都有独立的程序计数器</p>
+<p>如果线程正在执行Java中的方法，程序计数器记录的就是正在执行虚拟机字节码指令的地址，如果是<strong>Native</strong>方法，这个计数器就为空（undefined），因此该内存区域是唯一一个在Java虚拟机规范中没有规定OutOfMemoryError的区域。</p>
+<blockquote>
+<p>方法区（Methed Area）:方法区不等于永生代，内存共享，线程共享</p>
+</blockquote>
+<p>方法区用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译后的代码等数据。</p>
+<p>很多人原因把方法区称作“永久代”（Permanent Generation），本质上两者并不等价，只是HotSpot虚拟机垃圾回收器团队把GC分代收集扩展到了方法区，或者说是用来永久代来实现方法区而已，这样能省去专门为方法区编写内存管理的代码，但是在Jdk8也移除了“永久代”，使用Native Memory来实现方法区。</p>
+<p><strong>运行时常量池</strong>是方法区的一部分，Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息是常量池（Constant Pool Table）用于存放编译期生成的各种字面量和符号引用，这部分在类加载后进入方法区的运行是常量池中，如String类的intern()方法。</p>
+<blockquote>
+<p>本地方法栈/区（Native Method Stack）：线程私有</p>
+</blockquote>
+<p>本地方法栈与虚拟机栈的作用是一样的，只不过虚拟机栈是服务Java方法的，而本地方法栈是为虚拟机调用Native方法服务的。</p>
+<p>在Java虚拟机规范中对于本地方法栈没有特殊的要求，虚拟机可以自由的实现它，因此在Sun HotSpot虚拟机直接把本地方法栈和虚拟机栈合二为一了。</p>
+<blockquote>
+<p>虚拟机栈（JVM Stacks）：内存私有，它的生命周期和线程相同</p>
+</blockquote>
+<p>虚拟机栈（JVM Stacks）描述的是Java方法执行的内存模型，每个方法在执行的同时都会创建一个线帧（Stack Frame）用于存储局部变量表、操作数栈、动态链接、方法出口等信息，每个方法从调用直至执行完成的过程，都对应着一个线帧在虚拟机栈中入栈到出栈的过程。</p>
+<blockquote>
+<p>虚拟机堆（JVM Heap）:内存共享</p>
+</blockquote>
+<p>虚拟机堆是Java虚拟机中内存最大的一块，是被所有线程共享的，在虚拟机启动时候创建，Java堆唯一的目的就是存放对象实例，几乎所有的对象实例都在这里分配内存，随着JIT编译器的发展和逃逸分析技术的逐渐成熟，栈上分配、标量替换优化的技术将会导致一些微妙的变化，所有的对象都分配在堆上渐渐变得不那么“绝对”了。</p>
+<p>Java虚拟机规范规定，Java堆可以处在物理上不连续的内存空间中，只要逻辑上连续即可，就像我们的磁盘空间一样。在实现上也可以是固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是可扩展的，通过-Xmx和-Xms控制。</p>
+<h2 id="1-3-JVM的内存区域"><a href="#1-3-JVM的内存区域" class="headerlink" title="1.3 JVM的内存区域"></a>1.3 JVM的内存区域</h2><p>将上面的知识点总结一下，JVM的内存区域分为3大类：</p>
+<ol>
+<li><p>线程私有区域（包括 程序计数器， 虚拟机栈， 本地方法栈），跟随线程的启动而创建，随线程的结束而销毁</p>
+</li>
+<li><p>线程共享区域（包括 方法区 和 堆 ），跟随虚拟机的启动而创建，随虚拟机的关闭而销毁</p>
+</li>
+<li><p>直接内存（也叫做 堆外内存），它并不是JVM的一部分但这部分内存也会被频繁的使用，而且可能导致OutOfMemoryError。在JDK 1.4中新加入了NIO类，引入了一种基于Channel与缓冲区Buffer的IO方式，它通过一个存储在Java堆中的DirectByteBuffer对象作为这块内存的引用操作，它因此更高效，它避免了Java堆和Native堆来回交换数据的时间。</p>
+</li>
+</ol>
+<p>注意 ：直接内存分配不会受到Java堆大小的限制，但是受到本机总内存大小限制，在设置虚拟机参数的时候，不能忽略直接内存，把实际内存设置为-Xmx，使得内存区域的总和大于物理内存的限制，从而导致动态扩展时出现OutOfMemoryError异常。</p>
+<h2 id="1-4-多线程"><a href="#1-4-多线程" class="headerlink" title="1.4 多线程"></a>1.4 多线程</h2><p>JVM允许一个程序使用多个并发线程，Hotspot JVM中Java的线程与原生操作系统的线程是直接映射关系。即当线程本地存储、缓冲区分配、同步对象、栈、程序计数器等准备好以后，就会创建一个操作系统原生线程。Java 线程结束，原生线程随之被回收。操作系统负责调度所有线程，并把它们分配到任何可用的 CPU 上。当原生线程初始化完毕，就会调用 Java 线程的 run() 方法。run() 返回时，被处理未捕获异常，原生线程将确认由于它的结束是否要终止 JVM 进程（比如这个线程是最后一个非守护线程）。当线程结束时，会释放原生线程和 Java 线程的所有资源。</p>
+<p>在JVM后台运行的线程主要有以下几个。</p>
+<ol>
+<li>虚拟机线程(JVM Thread):虚拟机线程在JVM到达安全点(SafePoint)时出现。</li>
+<li>周期性任务线程:通过定时器调度线程来实现周期性操作的执行。</li>
+<li>GC线程: GC线程支持JVM中不同的垃圾回收活动。</li>
+<li>编译器线程:编译器线程在运行时将字节码动态编译成本地平台机器码,是JVM跨平台的具体实现。</li>
+<li>信号分发线程:接收发送到JVM的信号并调用JVM方法。</li>
+</ol>
+<p>（本段摘录《JAVA面试核心知识点精讲 原理篇》，网上查了好多资料都没有这部分）</p>
+<h2 id="1-5-Java垃圾回收"><a href="#1-5-Java垃圾回收" class="headerlink" title="1.5 Java垃圾回收"></a>1.5 Java垃圾回收</h2><p>将内存中不再被使用的对象进行回收，GC中用于回收的方法称为收集器，由于GC需要消耗一些资源和时间，Java在对对象的生命周期特征进行分析后，按照新生代、旧生代的方式来对对象进行收集，以尽可能的缩短GC对应用造成的暂停。</p>
+<p>不同的对象引用类型， GC会采用不同的方法进行回收，JVM对象的引用分为了四种类型：</p>
+<p>强引用：默认情况下，对象采用的均为强引用（这个对象的实例没有其他对象引用，GC时才会被回收）。<br>软引用：软引用是Java中提供的一种比较适合于缓存场景的应用（只有在内存不够用的情况下才会被GC）。<br>弱引用：在GC时一定会被GC回收。<br>虚引用：由于虚引用只是用来得知对象是否被GC。</p>
+<p>参考：<br>《JAVA面试核心知识点精讲 原理篇》<br>《深入理解Java虚拟机：JVM高级特性与最佳实践》</p>
 
     </div>
 
@@ -402,7 +477,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://xiaoniuhululu.com/2021/04/22/hello-world/" title="Hello World">https://xiaoniuhululu.com/2021/04/22/hello-world/</a>
+      <a href="https://xiaoniuhululu.com/2021/01/23/2021-1-23-jvm-study-1/" title="JVM从入门到放弃(1)">https://xiaoniuhululu.com/2021/01/23/2021-1-23-jvm-study-1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -437,18 +512,22 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
+              <a href="/tags/JAVA%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> JAVA基础</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/14/2021-04-13_hexo-next7-collect/" rel="prev" title="个人建站合集（hexo+ next7）">
-                  <i class="fa fa-chevron-left"></i> 个人建站合集（hexo+ next7）
+                <a href="/2021/01/21/2021-1-21-hexo-github-website-3/" rel="prev" title="github + hexo 小白超快搭建功能强大的个人博客网站(3)">
+                  <i class="fa fa-chevron-left"></i> github + hexo 小白超快搭建功能强大的个人博客网站(3)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/24/2021-04-24_springboot+mybatis%20plus/" rel="next" title="springboot2.4 整合mybatis-plus、mysql">
-                  springboot2.4 整合mybatis-plus、mysql <i class="fa fa-chevron-right"></i>
+                <a href="/2021/01/26/2021-1-26-hexo-github-website-4/" rel="next" title="github + hexo 小白超快搭建功能强大的个人博客网站(4)">
+                  github + hexo 小白超快搭建功能强大的个人博客网站(4) <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

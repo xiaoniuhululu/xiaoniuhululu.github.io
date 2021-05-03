@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CLong+Cang:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CEB+Garamond:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"xiaoniuhululu.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人建站合集（hexo+ next7）">
+<meta property="og:url" content="https://xiaoniuhululu.com/2021/04/14/2021-04-13_hexo-next7-collect/index.html">
+<meta property="og:site_name" content="小牛呼噜噜">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-14/1618331909371-5d663656cd1e142f45f37d043b41761.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616286865817-20181009190651.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610290516317-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610290626975-c53bcecdf02f056.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610292672642-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610293363410-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295449977-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295578646-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295906561-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616306369009-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616306934651-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307008617-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307127185-Snipaste_2021-03-21_12-21-27.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307177015-Snipaste_2021-03-21_12-24-51.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307277575-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307339975-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307599350-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610344879995-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610346449432-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610347140421-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349556120-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349528644-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349673841-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349728835-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349997001-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610350743212-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610350957725-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351343075-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351429719-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351465135-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610448055039-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610352814064-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616852777372-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610360780109-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610360987612-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361817439-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361868183-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361898271-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610362431408-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442382733-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610447774503-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610449051893-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610451301937-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610451387070-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610452258066-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610465081751-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610465941862-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610529273874-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610528828723-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610528958934-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610529426446-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611459979100-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460060294-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460691602-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460866734-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611461442529-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611461558523-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611462174529-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611462791848-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611463299606-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611464552501-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611464626578-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614073678437-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795770406-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795812121-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795906797-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796043685-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796346266-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796531839-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614083799333-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614087965693-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614089200278-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-11/1618153264281-image.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-11/1618153913355-IMG_20210408_004616.jpg">
+<meta property="article:published_time" content="2021-04-13T16:33:32.000Z">
+<meta property="article:modified_time" content="2021-04-13T16:39:09.114Z">
+<meta property="article:author" content="小牛呼噜噜">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-14/1618331909371-5d663656cd1e142f45f37d043b41761.jpg">
+
+
+<link rel="canonical" href="https://xiaoniuhululu.com/2021/04/14/2021-04-13_hexo-next7-collect/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<script data-ad-client="ca-pub-6335519754868836" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<meta name="google-site-verification" content="PtAVgP6v1jRvGzGkSHVLhY9VqQEE0fs4MxlbAA-jjaw" />
+
+
+
+
+
+
+
+
+
+<title>个人建站合集（hexo+ next7） | 小牛呼噜噜</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="/js/cursor/love.js"></script>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">小牛呼噜噜</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">爱喝可乐</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%BF%85%E5%A4%87%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">一些必备准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A5%E6%9C%89github-%E8%B4%A6%E6%88%B7"><span class="nav-number">1.1.</span> <span class="nav-text">拥有github 账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDnodejs"><span class="nav-number">1.2.</span> <span class="nav-text">下载nodejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDgit"><span class="nav-number">1.3.</span> <span class="nav-text">下载git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装使用Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netlify%E5%92%8CGithub%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2Hexo%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">Netlify和Github持续部署Hexo博客，并实现版本控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99"><span class="nav-number">4.</span> <span class="nav-text">深度优化网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDNext%E4%B8%BB%E9%A2%98%E7%A4%BE%E5%8C%BA%E7%89%88"><span class="nav-number">4.1.</span> <span class="nav-text">下载Next主题社区版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9Next%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="nav-number">4.2.</span> <span class="nav-text">修改Next为中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">4.3.</span> <span class="nav-text">网站一些基本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE"><span class="nav-number">4.4.</span> <span class="nav-text">新建标签及分类标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.5.</span> <span class="nav-text">更换主题的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%A4%B4%E5%83%8F"><span class="nav-number">4.6.</span> <span class="nav-text">设置头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%9F%A5%E4%B9%8E%E8%B1%86%E7%93%A3%E7%AD%89%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%87%E6%94%AF%E6%8C%81"><span class="nav-number">4.7.</span> <span class="nav-text">增加知乎豆瓣等自定义图标支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.8.</span> <span class="nav-text">编写博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E8%87%B3github"><span class="nav-number">4.9.</span> <span class="nav-text">部署至github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E8%B5%9E%E8%B5%8F%E5%8A%9F%E8%83%BD"><span class="nav-number">4.10.</span> <span class="nav-text">开启赞赏功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E8%AE%A2%E9%98%85%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="nav-number">4.11.</span> <span class="nav-text">开启订阅公众号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E6%8E%89%E5%BA%95%E9%83%A8-%E5%8E%9F%E5%8A%9B%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.12.</span> <span class="nav-text">去掉底部-原力驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87"><span class="nav-number">4.13.</span> <span class="nav-text">设置阅读全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%B8%A6-%E7%9A%84%E4%BE%BF%E7%AD%BE"><span class="nav-number">4.14.</span> <span class="nav-text">修改文章底部带#的便签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%BD%91%E7%AB%99%E5%9B%BE%E6%A0%87"><span class="nav-number">4.15.</span> <span class="nav-text">修改网站图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E6%B5%8F%E8%A7%88%E8%BF%9B%E5%BA%A6"><span class="nav-number">4.16.</span> <span class="nav-text">浏览页面显示当前浏览进度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">4.17.</span> <span class="nav-text">增加搜索功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6%EF%BC%8C%E7%94%A8%E4%BA%8E%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E7%B4%A2%E5%BC%95%E6%95%B0%E6%8D%AE%EF%BC%88%E5%9C%A8%E5%8D%9A%E5%AE%A2%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%88%97%E5%91%BD%E4%BB%A4%EF%BC%89%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD"><span class="nav-number">0.1.</span> <span class="nav-text">增加不蒜子统计功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AElicense%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="nav-number">0.2.</span> <span class="nav-text">设置license的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD"><span class="nav-number">0.3.</span> <span class="nav-text">添加聊天功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="nav-number">0.4.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A03d%E5%9C%B0%E7%90%83"><span class="nav-number">0.5.</span> <span class="nav-text">添加3d地球</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A"><span class="nav-number">0.6.</span> <span class="nav-text">域名绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89hexo%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%E7%9A%84%E6%A8%A1%E6%9D%BF"><span class="nav-number">0.7.</span> <span class="nav-text">自定义hexo创建文章的模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88"><span class="nav-number">0.8.</span> <span class="nav-text">增加鼠标点击特效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E9%A1%B5%E6%A0%B7%E5%BC%8F"><span class="nav-number">0.9.</span> <span class="nav-text">自定义网页样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0Google%E5%B9%BF%E5%91%8A"><span class="nav-number">0.10.</span> <span class="nav-text">添加Google广告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-Google-Adsense-ads-txt"><span class="nav-number">0.11.</span> <span class="nav-text">添加 Google Adsense ads.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%87%E6%A1%88%E4%BF%A1%E6%81%AF"><span class="nav-number">0.12.</span> <span class="nav-text">添加备案信息</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小牛呼噜噜"
+      src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+  <p class="site-author-name" itemprop="name">小牛呼噜噜</p>
+  <div class="site-description" itemprop="description">微信公众号: 小牛呼噜噜</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610355881211-qrcode_for_gh_da14b067e711_344.jpg" title="公众号 → https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;zj827622690&#x2F;MyBlogImageBed&#x2F;2021-1-11&#x2F;1610355881211-qrcode_for_gh_da14b067e711_344.jpg" rel="noopener" target="_blank"><i class="iconfont weixin fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_41603102" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41603102" rel="noopener" target="_blank"><i class="iconfont csdn fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaoniuhululu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xiaoniuhululu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://gitee.com/zj827622690" class="github-corner" title="Follow me on Gitee" aria-label="Follow me on Gitee" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaoniuhululu.com/2021/04/14/2021-04-13_hexo-next7-collect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-29/1617032076425-image.png">
+      <meta itemprop="name" content="小牛呼噜噜">
+      <meta itemprop="description" content="微信公众号: 小牛呼噜噜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小牛呼噜噜">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          个人建站合集（hexo+ next7）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-14 00:33:32 / 修改时间：00:39:09" itemprop="dateCreated datePublished" datetime="2021-04-14T00:33:32+08:00">2021-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BB%BA%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">建站</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span id="/2021/04/14/2021-04-13_hexo-next7-collect/" class="post-meta-item twikoo_visitors" data-flag-title="个人建站合集（hexo+ next7）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="twikoo_visitors"></span>
+    </span>
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-14/1618331909371-5d663656cd1e142f45f37d043b41761.jpg"></p>
+<span id="more"></span>
+
+<p>前段时间小牛为了给网站更换评论系统，把网站弄崩了（可太难了~~），准备重新走一遍，顺便把之前写的文章合在一起，并修正。（本文以后随缘更新）<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616286865817-20181009190651.png"></p>
+<hr>
+<p>[toc]</p>
+<h2 id="一些必备准备工作"><a href="#一些必备准备工作" class="headerlink" title="一些必备准备工作"></a>一些必备准备工作</h2><h3 id="拥有github-账户"><a href="#拥有github-账户" class="headerlink" title="拥有github 账户"></a>拥有github 账户</h3><p>如果没有的话，首先去github<a target="_blank" rel="noopener" href="https://github.com/">官网</a>去注册一个账户（有的话，相信你懂这个网站，这部分你可以跳过）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610290516317-image.png"></p>
+<p>按部就班地填写信息即可，用户名别乱起，以后改起来麻烦，后面还要拿用户名当域名，当然你们开心就好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610290626975-c53bcecdf02f056.jpeg"></p>
+<p>接着创建Repository</p>
+<p>登陆GitHub，点击右上角的 +号，选择New repository </p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610292672642-image.png"></p>
+<p>现在新建一个仓库 <code>blog</code>(如果你没有买域名，那Repository的名字格式是username.github.io，比如xiaoniuhululu.github.io )。<br>其余先不弄，点击Create repository</p>
+<p>下载git bash这个软件，装到win10电脑中，一路默认安装即可</p>
+<p>在电脑中，创建一个目录 来保存这个项目</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-10/1610293363410-image.png"></p>
+<p>期间可能会问你 邮箱地址和用户名，密码 ，按照上面的提示执行命令，把相关信息换成自己的即可。</p>
+<h3 id="下载nodejs"><a href="#下载nodejs" class="headerlink" title="下载nodejs"></a>下载nodejs</h3><p>去官网去下，同时配置一下，可以看我之前的<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/u6F7AeybFBERw7CkezMKIg">一篇文章</a></p>
+<h3 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h3><p>可以参考小牛以前写过一篇文章关于<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41603102/article/details/88351740">git的安装和使用</a>，由于本文会很长，为了详略得当，这里就略过了 = =</p>
+<h2 id="安装使用Hexo"><a href="#安装使用Hexo" class="headerlink" title="安装使用Hexo"></a>安装使用Hexo</h2><p>node 环境配置好后，直接执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>cnpm 是因为我配置了阿里云的镜像</p>
+</blockquote>
+<p>接着执行一下命令确认hexo安装完好。</p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<p>该命令会显示hexo的版本及依赖的包</p>
+<p>我们先尝试启动这个网站，没错就这么简单</p>
+<p>我们在<code>D:\GitBlog</code>这个目录下（这个目录自己选即可），保证这个目录为空。然后初始化我们的网站，输入<code>hexo init</code>初始化文件夹，接着输入<code>cnpm install</code>安装必备的组件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295449977-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295578646-image.png"></p>
+<p>确保git部署,再执行一个命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>打开本地服务器，然后浏览器打开<code>http://localhost:4000/</code>，就可以看到我们的博客啦，效果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610295906561-image.png"></p>
+<p>这里贴一下常用的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo s    &#x2F;&#x2F;启动服务预览</span><br><span class="line">hexo d    &#x2F;&#x2F;部署</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">hexo server &#x2F;&#x2F;Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s &#x2F;&#x2F;静态模式</span><br><span class="line">hexo server -p 5000 &#x2F;&#x2F;更改端口</span><br><span class="line">hexo server -i 192.168.20.20 &#x2F;&#x2F;自定义 IP</span><br><span class="line">hexo clean &#x2F;&#x2F;清除缓存</span><br></pre></td></tr></table></figure>
+
+<p>到官网的主题进行更换:<a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo themes</a>，找自己喜欢的<br>这块后面文章再讲，先跳过</p>
+<h2 id="Netlify和Github持续部署Hexo博客，并实现版本控制"><a href="#Netlify和Github持续部署Hexo博客，并实现版本控制" class="headerlink" title="Netlify和Github持续部署Hexo博客，并实现版本控制"></a><del>Netlify和Github持续部署Hexo博客，并实现版本控制</del></h2><blockquote>
+<p>2021-4-11 该方法弃用，国内太卡，根本访问不了，已更换成腾讯云服务器</p>
+</blockquote>
+<p>简单解释一下，小牛之前是用github page来托管网站，但感觉速度太慢，发现<code>Netlify</code>还不错，测试了一下，还行,就转移过去了</p>
+<blockquote>
+<p>Netlify 是一个静态网站自动化部署系统，可快速将静态网站直接构建部署，不需要你提供静态资源服务器。Netlify 基于 JAMstack 架构，即客户端 JavaScript、可重用 API 和预构建 Markup，这是一种现代化、未来化的构建网站的方法，可以提供更好的性能(全球 CDN )、安全性(HTTPS)和更好的开发体验(持续部署及Git集成)。且 Netlify 提供的功能和服务相比 GitHub Pages 功能更为强大——绑定域名、页面重定向、静态资源文件压缩、免费的 HTTPS 等等</p>
+</blockquote>
+<p>优点：</p>
+<blockquote>
+<p>Simply Push to Deploy</p>
+<p>支持热部署，只需要将代码 push 到 Git 远程仓库即可自动构建及更新。</p>
+<p>Free automatic HTTPS</p>
+<p>支持自定义域名，提供免费 HTTPS ，可上传域名证书。</p>
+<p>Never have to leave Terminal</p>
+<p>可在终端中操作 Netlify。</p>
+</blockquote>
+<p>由于我们准备使用 使用Netlify和Github持续部署Hexo博客 ，这样我们的博客源码会被其他人看到，里面可能有一些私密密码，所以为了安全起见，决定将该仓库设为<strong>私有化</strong>。（我这里新建的仓库名为<code>blog</code>,你们可以自定义）（如果是小牛之前仅仅普通的将hexo 部署到github pages ，那可以github仓库可以公开，因为hexo 只会默认推送 <code>/public </code>目录到github仓库了，源码不会推送上去，所以这个可以放心大胆设为公开化）</p>
+<p>选择Private，这样别人就无法搜索/查看你的博客分支了，同时我们不要勾选和添加任何README以及gitignore文件，直接选择“Create repository“即可完成仓库的创建。</p>
+<p>复制你刚刚新建的仓库的地址:</p>
+<pre><code>`git@github.com:xiaoniuhululu/blog.git`
+</code></pre>
+<p>回到项目根目录,我们将本地项目和新建的repository通过git联系起来，在当前本地目录打开git bash执行下面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  git init</span><br><span class="line">  git remote add origin git@github.com:xiaoniuhululu&#x2F;blog.git</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;推送git至仓库</span><br><span class="line">  git add .&#x2F;</span><br><span class="line">  git commit -m &#39;init blog&#39;</span><br><span class="line">  git push --set-upstream origin master</span><br></pre></td></tr></table></figure>
+
+
+<p>编辑配置文件：用vscode工具 打开 本地博客目录下的_config.ymlL:</p>
+<p>把刚刚拷贝的仓库的地址粘贴到repository</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git #部署方式</span><br><span class="line">  repository: git@github.com:xiaoniuhululu&#x2F;blog.git #github仓库地址</span><br><span class="line">  branch: run-page #部署分支 注意这个分支，照做，后面会讲</span><br></pre></td></tr></table></figure>
+
+<p>修改完配置文件后，执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理静态文件</span><br><span class="line">hexo g &#x2F;&#x2F;生成静态文件</span><br><span class="line">hexo d &#x2F;&#x2F;部署</span><br></pre></td></tr></table></figure>
+<p>可以看到github的仓库已经变了,且多了一个分支</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616306369009-image.png"></p>
+<blockquote>
+<p>这样以后:</p>
+<p>master 通过git命令 提交，管理博客源码</p>
+<p>use-page 通过hexo命令 提交，更新博客页面 </p>
+</blockquote>
+<p>接着 托管到Netlify：</p>
+<p>我们先到<a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify官网</a>注册一下账号,选择GitHub登录</p>
+<p>然后新建项目：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616306934651-image.png"></p>
+<p>选择GitHub来源：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307008617-image.png"></p>
+<p>选择我们在github的项目：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307127185-Snipaste_2021-03-21_12-21-27.png"></p>
+<p>进入一步进行配置：(把后面2个框，清空即可)<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307177015-Snipaste_2021-03-21_12-24-51.png"></p>
+<p>等一会，Netlify会自动帮我们生成一个网站</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307277575-image.png"></p>
+<p>更改网址别名，红框是Netlify 为我们提供的域名网站（后面我会用买的域名替换）<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307339975-image.png"></p>
+<p>访问这个网站，就能跳转到我们的网站</p>
+<p>配置自定义域名的话，首先你得去买一个域名，然后再Netlify设置中，找到domain,然后去域名提供商 去改dns配置即可<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-21/1616307599350-image.png"></p>
+<blockquote>
+<p>这样以后:</p>
+<p>master 通过git命令 提交，管理博客源码</p>
+<p>use-page 通过hexo命令 提交，更新博客页面 </p>
+<p>以后换电脑啥的都不怕了，直接把源码拉下来配置。如果写错了，还可以版本回退是不是很舒服。🌞</p>
+</blockquote>
+<h2 id="深度优化网站"><a href="#深度优化网站" class="headerlink" title="深度优化网站"></a>深度优化网站</h2><p>好的网站，需要持续不断的优化</p>
+<h3 id="下载Next主题社区版"><a href="#下载Next主题社区版" class="headerlink" title="下载Next主题社区版"></a>下载Next主题社区版</h3><p>大家去官网下载自己喜欢的主题，官网地址：<code>https://hexo.io/themes/</code></p>
+<p>太多了，不知道怎么选？可以去百度一下，我这里就选是<strong>Next</strong></p>
+<ol>
+<li>下载主题next<blockquote>
+<p>注意：我下的不是原生Next版本,我下的是社区版的Next(为了waline 评论系统)，地址：<strong><a target="_blank" rel="noopener" href="https://github.com/lizheming/hexo-theme-next">https://github.com/lizheming/hexo-theme-next</a></strong></p>
+</blockquote>
+</li>
+</ol>
+<p>在GitBlog\themes目录下，执行：</p>
+<p><code>git clone https://github.com/lizheming/hexo-theme-next.git</code></p>
+<p>修改 站点配置文件_config.yml,注意不是next主题里的_config.yml，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">##theme: landscape</span><br><span class="line">theme: hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，使配置文件修改生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo s    &#x2F;&#x2F;启动服务预览</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610344879995-image.png"></p>
+<h3 id="修改Next为中文"><a href="#修改Next为中文" class="headerlink" title="修改Next为中文"></a>修改Next为中文</h3><p>修改 站点配置文件_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#language: en</span><br><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+
+<p>执行以下命令，使配置文件修改生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo s    &#x2F;&#x2F;启动服务预览</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610346449432-image.png"></p>
+<h3 id="网站一些基本信息"><a href="#网站一些基本信息" class="headerlink" title="网站一些基本信息"></a>网站一些基本信息</h3><p>找到Site ，配置网站一些基本信息，下面贴一下官网的基本配置：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610347140421-image.png"></p>
+<p>修改 <strong>站点配置文件_config.yml</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349556120-image.png"></p>
+<p>执行以下命令，使配置文件修改生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo s    &#x2F;&#x2F;启动服务预览</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349528644-image.png"></p>
+<h3 id="新建标签及分类标签"><a href="#新建标签及分类标签" class="headerlink" title="新建标签及分类标签"></a>新建标签及分类标签</h3><p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349673841-image.png"></p>
+<p>修改 <strong>主题配置文件_config.yml</strong>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349728835-image.png"></p>
+<p>把 tags 和 categories ，about前面的 # 删除</p>
+<p>效果如下:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610349997001-image.png"></p>
+<p>启用关于页，标签页和分类页，我们需要自己手动建页</p>
+<p>首先打开source目录</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610350743212-image.png"></p>
+<p>执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n page about</span><br><span class="line">hexo n page tags</span><br><span class="line">hexo n page categories</span><br></pre></td></tr></table></figure>
+<p>source目录下会多处3个文件夹：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610350957725-image.png"></p>
+<p>分别编辑各文件夹的index.md<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351343075-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351429719-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610351465135-image.png"></p>
+<h3 id="更换主题的样式"><a href="#更换主题的样式" class="headerlink" title="更换主题的样式"></a>更换主题的样式</h3><p>next 内置许多样式，可以自己选择</p>
+<p>在主题配置文件/next/_config.yml中查找：<strong>scheme</strong>，找到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+<p>个人比较喜欢 Gemini</p>
+<p>选择你喜欢的一种样式，去掉前面的 #，其他主题前加上 # 即可。</p>
+<h3 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h3><p>在主题配置文件/next/_config.yml中查找：<strong>avatar</strong>，找到如下代码：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610448055039-image.png"></p>
+<p>小牛这里用的是 图片在自己github图床的地址，如果有小伙伴不了解，可以看我之前的一篇文章，关于github怎么搭建图床的，并通过cdn加速</p>
+<p>rounded 是表示 头像为原型<br>rotated 是表示 头像可以旋转</p>
+<p>效果如下：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610352814064-image.png"></p>
+<h3 id="增加知乎豆瓣等自定义图标支持"><a href="#增加知乎豆瓣等自定义图标支持" class="headerlink" title="增加知乎豆瓣等自定义图标支持"></a>增加知乎豆瓣等自定义图标支持</h3><p>Hexo NexT 原始主题是采用了 Font Awesome 图标，并未包含如微信公众号，知乎这些社交网站图标。</p>
+<ol>
+<li>下载图标<br>首先，前往 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">阿里巴巴矢量库</a> 挑选需要的图标，在图标上点击 “购物车” 将其加入购物车。</li>
+</ol>
+<p>选择「下载代码」，会将所有的图标一起下载下来<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616852777372-image.png"></p>
+<ol start="2">
+<li>修改主题配置文件_config.yml<br>将下载的文件解压后，在里面，找到 iconfont.css 文件，打开后将其中的所有内容都复制加入到主题 CSS 自定义文件<code>source\_data\styles.styl</code>   中的任意位置。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;自定义图标 font-class引用</span><br><span class="line"></span><br><span class="line">@font-face &#123;font-family: &quot;iconfont&quot;;</span><br><span class="line">  src: url(&#39;iconfont.eot?t&#x3D;1616849051933&#39;); &#x2F;* IE9 *&#x2F;</span><br><span class="line">  src: url(&#39;iconfont.eot?t&#x3D;1616849051933#iefix&#39;) format(&#39;embedded-opentype&#39;), &#x2F;* IE6-IE8 *&#x2F;</span><br><span class="line">  url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,d09GMgABAAAAAAQIAAsAAAAACEwAAAO5AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqEIIN+ATYCJAMMCwgABCAFhG0HSRtXBxHVmynJfiTYtnFSVsx&#x2F;DkRyF+lM8Py&#x2F;Tr1P+lEEYSgxqAQsly0XGCfAYUk3Q3limnocAFubUotQlRGKJTkPvsv&#x2F;SH4wwuVD18&#x2F;fz9dFAW6Wx2ZzqbjvLZuyMW2AA5sOqBurhDeQD+R&#x2F;GLvyIvZDAJsSaiGduvRyMVEYwwSQmdOmjMNMmVA1hYKJYJTMVcgOEjC1oFYGbPd&#x2F;L59oICZoJOgYY&#x2F;tN7jyRdm+S31q6F&#x2F;cY6RKQjecA2CLQgVqAAhld6hqKHkZroWMrSNVnGigEbaxAPI4vVXFjpf94GoiBgZIgtZpGOymZLYDAW0sCMc7fA0aP5stI+ggfAQ07qUDl5+daVrpty4rIm0Hh12707eDYu2lDzoRtPzokFhsUilQeci5qh8NuOJJoE0vMNDMm+IOjUUsdqBJBZmhQJGL0XNW03PeQl0WhKhRo5hgWysbi8q2PRpq7QxqfdUK5hyQWGxza6+3xzwXOu44kgY1rIu7b&#x2F;fytqr0b3IuN9&#x2F;cF9juyzgnb2OV076kqV049NQ3lyjnK+NP7P9oz9rlm5UkTuxrd7f6BdiOoMcienDz3X2+zxVHebkxfbc28GbwmrVwTD+IOjawytLLvVx5aZWSZ5a88zA&#x2F;q9pFVyqB&#x2F;WOVgEMpKWEOD&#x2F;rCLGBPujxpYsX&#x2F;5Vasr9Kvo3q04sEL&#x2F;Vav6VxhY8a5bsV+F1avK9684EFzELd9v9ep+5d2KuaOcE2ldA8OGME7Wzdbc1Lp9HuR07l9tScNscZ3JBdJ79pRq7VK+FXwralvQd2&#x2F;zFNfQtih1t7d3pev80f3Eldmjpat0mT3GlbQq+k+rRq2OqpP1MuOllfw&#x2F;4&#x2F;+CkJHyZUEy5QCIe0p077&#x2F;&#x2F;DYmND10fk9rqj+koAF5s6H7Yl7fzgPlW3AJ&#x2F;uUQB8bi6cIVh1pUstaV6QmeD&#x2F;Q7FUMwx&#x2F;m0xQAav+uPZrfNBMMmOQSORYtAxqURU1FqQgEMjMDBpCzY16brYIZP56IiygBpsACCkcR00UngEOmk8JirqS0gghy9gkCY62AyWzDUdqsg02+4oaBQ92B8kxztZVq2DwhuGczWSVPjsF0pJAeibLpuYcUcZY0J5h0GVgIQ3mMBhuK4Mh3BGp01UPca2pbI7NY63qqajoFH0YH+QHO&#x2F;kNtY69&#x2F;0bhnM1UlNVEX6hlNQ69E3XgjijvVXVtRxT3mFQJSDhDSbgwNWMMhzlvTI6bWKP8DG2qB61Rc38+PZ8cR5iDWNNXTTRRaEmFL9fP5i+aQ9sGf7R6RYNh9Psa6oqAAAA&#39;) format(&#39;woff2&#39;),</span><br><span class="line">  url(&#39;iconfont.woff?t&#x3D;1616849051933&#39;) format(&#39;woff&#39;),</span><br><span class="line">  url(&#39;iconfont.ttf?t&#x3D;1616849051933&#39;) format(&#39;truetype&#39;), &#x2F;* chrome, firefox, opera, Safari, Android, iOS 4.2+ *&#x2F;</span><br><span class="line">  url(&#39;iconfont.svg?t&#x3D;1616849051933#iconfont&#39;) format(&#39;svg&#39;); &#x2F;* iOS 4.1- *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;以下代码相对下载下来的代码做了部分修改</span><br><span class="line">.iconfont &#123;</span><br><span class="line">  font-family: &quot;iconfont&quot; !important;</span><br><span class="line">  font-size: inherit; &#x2F;&#x2F;修改！</span><br><span class="line">  font-style: normal;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.csdn:before &#123;</span><br><span class="line">  content: &quot;\e50d&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.weixin:before &#123; &#x2F;&#x2F;修改！</span><br><span class="line">  content: &quot;\e609&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>主题注入功能</li>
+</ol>
+<p>修改/themes/next/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> custom_file_path:</span><br><span class="line">-  #style: source&#x2F;_data&#x2F;styles.styl</span><br><span class="line">+  style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用说明（侧边栏）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https:&#x2F;&#x2F;github.com&#x2F;user_id || fab fa-github</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  Zhihu: https:&#x2F;&#x2F;www.csdn.com&#x2F;people&#x2F;user_id || iconfont csdn</span><br><span class="line">  Douban: https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;user_id&#x2F; || iconfont douban</span><br></pre></td></tr></table></figure>
+<p>重新部署项目即可看到效果。</p>
+<h3 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h3><p>Hexo的博客都是用Markdown写的。</p>
+<p>在D:\username.github.io\source_posts的空白处右键Git Bash Here</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#39;第一篇文章&#39;</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610360780109-image.png"></p>
+<p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo s    &#x2F;&#x2F;启动服务预览</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610360987612-image.png"><br>文章还是空的，我们现在来编辑一下：<br>分别依次编辑：标签，分类，正文</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361817439-image.png"></p>
+<p>效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361868183-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610361898271-image.png"></p>
+<h3 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理缓存</span><br><span class="line">hexo g    &#x2F;&#x2F;生成</span><br><span class="line">hexo d    &#x2F;&#x2F;上传部署</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-11/1610362431408-image.png"></p>
+<h3 id="开启赞赏功能"><a href="#开启赞赏功能" class="headerlink" title="开启赞赏功能"></a>开启赞赏功能</h3><p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>Reward</code>,修改：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442382733-image.png"></p>
+<h3 id="开启订阅公众号"><a href="#开启订阅公众号" class="headerlink" title="开启订阅公众号"></a>开启订阅公众号</h3><p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>follow_me</code>,修改：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610447774503-image.png"></p>
+<h3 id="去掉底部-原力驱动"><a href="#去掉底部-原力驱动" class="headerlink" title="去掉底部-原力驱动"></a>去掉底部-原力驱动</h3><p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610449051893-image.png"></p>
+<h3 id="设置阅读全文"><a href="#设置阅读全文" class="headerlink" title="设置阅读全文"></a>设置阅读全文</h3><p>如果你想让你的文章只显示一部分，多余的可以点击阅读全文来查看，那么你需要在你的文章中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其后面的部分就不会显示了，只能点击阅读全文才能看</p>
+<h3 id="修改文章底部带-的便签"><a href="#修改文章底部带-的便签" class="headerlink" title="修改文章底部带#的便签"></a>修改文章底部带#的便签</h3><p>修改前：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610451301937-image.png"></p>
+<p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>tag_icon</code>,改成true即可</p>
+<p>效果：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610451387070-image.png"></p>
+<h3 id="修改网站图标"><a href="#修改网站图标" class="headerlink" title="修改网站图标"></a>修改网站图标</h3><p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>favicon</code>,修改：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610452258066-image.png"></p>
+<h3 id="浏览页面显示当前浏览进度"><a href="#浏览页面显示当前浏览进度" class="headerlink" title="浏览页面显示当前浏览进度"></a>浏览页面显示当前浏览进度</h3><p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>scrollpercent</code>,改成true即可</p>
+<h3 id="增加搜索功能"><a href="#增加搜索功能" class="headerlink" title="增加搜索功能"></a>增加搜索功能</h3><h1 id="安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）："><a href="#安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）：" class="headerlink" title="安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）："></a>安装插件，用于生成博客索引数据（在博客根目录下执行下列命令）：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+<p>在**站点配置文件 _config.yml **中添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: .&#x2F;public&#x2F;search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>path：索引文件的路径，相对于站点根目录<br>field：搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面<br>limit：限制搜索的条目数</p>
+<p>在<strong>主题配置文件 _config.yml 中</strong>找到<code>local_search</code> ,把enabled改成true即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610465081751-image.png"></p>
+<p>把他同步到github上时候，发现下面搜索卡死<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610465941862-image.png"></p>
+<p>hexo clean 后再提交就可以了<br>如果还有问题，可参考<code>https://blog.csdn.net/aoman_hao/article/details/86713171</code>这篇网上的文章</p>
+<h3 id="增加不蒜子统计功能"><a href="#增加不蒜子统计功能" class="headerlink" title="增加不蒜子统计功能"></a>增加不蒜子统计功能</h3><p>在<strong>主题配置文件 _config.yml 中</strong>找到<code>busuanzi_count</code> ,把enabled改成true即可</p>
+<h3 id="设置license的样式"><a href="#设置license的样式" class="headerlink" title="设置license的样式"></a>设置license的样式</h3><p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>creative_commons</code>,修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: true</span><br><span class="line">  post: true</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<p>还需修改 <strong>站点配置文件_config.yml</strong>，找到<code>url</code>,换成自己博客的地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;example.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: https:&#x2F;&#x2F;xiaoniuhululu.github.io&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加聊天功能"><a href="#添加聊天功能" class="headerlink" title="添加聊天功能"></a><del>添加聊天功能</del></h3><blockquote>
+<p>个人感觉鸡肋，食之无味弃之可惜</p>
+</blockquote>
+<p>小牛这里选的是 chatra, 试了试挺好用的</p>
+<p>去官网：<code>https://app.chatra.io/</code>，注册一个账户，免费的就行</p>
+<p>获取chatra_id,存在setup里，感觉贼奇葩<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610529273874-image.png"></p>
+<p>修改 <strong>主题配置文件_config.yml</strong>，找到<code>chat</code>,修改如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610528828723-image.png"></p>
+<p>由于我们选择的是chatra,那我们还需配置chatra相关信息</p>
+<p>把id换一下即可<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610528958934-image.png"></p>
+<p>效果图如下：<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-13/1610529426446-image.png"></p>
+<h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p>在博客根目录下安装置顶插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>在需要置顶的文章头加入<code>top: true</code><br>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: test</span><br><span class="line">date: 2021</span><br><span class="line">categories: 测试</span><br><span class="line">top: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+
+<p>然后在文章标题下面添加一个置顶标签样式</p>
+<p>打开：/blog/themes/next/layout/_macro 目录下的post.swig文件，定位到<code>div class=&quot;post-meta&quot;</code>标签下，插入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">  &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">  &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加3d地球"><a href="#添加3d地球" class="headerlink" title="添加3d地球"></a><del>添加3d地球</del></h3><blockquote>
+<p>太卡了，弃用</p>
+</blockquote>
+<p>先去<a href="https://www.revolvermaps.com/?target=setup">revolvermaps官网</a> 选择一款你喜欢的样式，将代码拷贝出来</p>
+<p>然后把代码，拷贝到\themes\next\layout_macro\sidebar.swig里即可</p>
+<h3 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h3><p>根据之前的教程，目前默认的域名还是username.github.io，感觉怪怪的，但是一般个人网站好像都是<a target="_blank" rel="noopener" href="http://www.name.com格式的,为此小牛没法白嫖了,只能掏钱了/">www.name.com格式的，为此小牛没法白嫖了，只能掏钱了</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611459979100-image.png"></p>
+<ol>
+<li>买域名</li>
+</ol>
+<p>小牛是去<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/domain/searchresult/#/?keyword=&suffix=com">阿里云</a>买的，腾讯云，华为云 啥的都可以买</p>
+<p>实名认证即可，不需要备案，如果服务器是内地的就需要备案。Hexo网站的服务器是海外的因此可以跳过这步。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460060294-image.png"></p>
+<ol start="2">
+<li>域名绑定</li>
+</ol>
+<p>先在阿里云上 控制台-&gt;域名服务，找到自己的域名</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460691602-image.png"></p>
+<ol start="3">
+<li>域名解析（本地与服务器映射）</li>
+</ol>
+<p>点击新手引导</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611460866734-image.png"></p>
+<p>这里得填网站的IP地址，但我们现在只知道我们网站默认的github的域名，我们执行ping一下即可（打开终端，输入ping 用户名.github.io）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611461442529-image.png"></p>
+<p>把得到的IP地址填入阿里云中</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611461558523-image.png"></p>
+<blockquote>
+<p>解析记录设置两个：www和@，线路默认就ok</p>
+<p>(1) @:记录类型选A，A记录的就是ip地址，不用改</p>
+<p>(2) www:记录类型选CNAME，CNAME记录值填你的github博客网址，如我的是<del>xiaoniuhululu.github.io</del> <code>https://xiaoniuhululu.netlify.app/</code></p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611462174529-image.png"></p>
+<ol start="4">
+<li>本地设置修改<br>这些全部设置完成后，此时你并不能根据申请的域名访问你的博客。接着你需要做的是在hexo根目录的source文件夹里创建CNAME文件，<strong>不带任何后缀</strong>，里面添加你的域名信息，如：<code>xiaoniuhululu.com</code>。可以用<a target="_blank" rel="noopener" href="http://www.xiaoniuhululu.com和xiaoniuhululu.com访问都是可以的.重新hexo/">www.xiaoniuhululu.com和xiaoniuhululu.com访问都是可以的。重新hexo</a> g,hexo d，并发布即可用新的域名访问。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611462791848-image.png"></p>
+<p>效果展示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611463299606-image.png"></p>
+<p>但发现浏览器提示不安全？这个瑕疵可不能忽视，继续折腾一番</p>
+<p>在网上查了许久，发现github自己就支持自定义域名的https的请求</p>
+<p>HTTPS 让你的网站和网站访客更安全，并且 Github 提供的这些 IP 地址自动将你的站点加入了 CDN，提高了访问速度。你还可以在 GiHub Pages 仓库的Settings里勾选 ‘Enforce HTTPS’，这样所有访问你站点的请求都会走 HTTPS。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611464552501-image.png"></p>
+<p>不得不感叹，github太良心了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-24/1611464626578-image.png"></p>
+<h3 id="自定义hexo创建文章的模板"><a href="#自定义hexo创建文章的模板" class="headerlink" title="自定义hexo创建文章的模板"></a>自定义hexo创建文章的模板</h3><p>网站好了，应该该写文章了，每次我们会因为格式问题，而导致花费额外的时间，一个良好的模板，会帮助我们节约时间。</p>
+<p>在博客的scaffolds目录下有三个md文档，只需要改post.md即可。</p>
+<p>小牛的模板如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">permalink:</span><br><span class="line">categories:</span><br><span class="line">tags: []</span><br><span class="line">comments: true</span><br><span class="line">----</span><br><span class="line"></span><br><span class="line">&lt;!-- 前言 --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">## 0x01 </span><br><span class="line"></span><br><span class="line">## 0x02</span><br><span class="line"></span><br><span class="line">## 0x03</span><br><span class="line"></span><br><span class="line">## 0x04</span><br></pre></td></tr></table></figure>
+
+<h3 id="增加鼠标点击特效"><a href="#增加鼠标点击特效" class="headerlink" title="增加鼠标点击特效"></a>增加鼠标点击特效</h3><p>小牛比较喜欢点击出现的爱心特效，下面简单记录一下过程。</p>
+<ol>
+<li>将下面JS 文件复制到目录 /themes/next/source/js/cursor/ 下</li>
+</ol>
+<p>love.js:</p>
+<p><code>/*网页鼠标点击特效（爱心）*/ !function (e, t, a) &#123;function r() &#123;for (var e = 0; e &lt; s.length; e++) s[e].alpha &lt;= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = &quot;left:&quot; + s[e].x + &quot;px;top:&quot; + s[e].y + &quot;px;opacity:&quot; + s[e].alpha + &quot;;transform:scale(&quot; + s[e].scale + &quot;,&quot; + s[e].scale + &quot;) rotate(45deg);background:&quot; + s[e].color + &quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function n() &#123;var t = &quot;function&quot; == typeof e.onclick &amp;&amp; e.onclick;e.onclick = function (e) &#123;t &amp;&amp; t(), o(e)&#125;&#125;function o(e) &#123;var a = t.createElement(&quot;div&quot;);a.className = &quot;heart&quot;, s.push(&#123;el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()&#125;), t.body.appendChild(a)&#125;function i(e) &#123;var a = t.createElement(&quot;style&quot;);a.type = &quot;text/css&quot;;try &#123;a.appendChild(t.createTextNode(e))&#125; catch (t) &#123;a.styleSheet.cssText = e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function c() &#123;return &quot;rgb(&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;,&quot; + ~~(255 * Math.random()) + &quot;)&quot;&#125;var s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) &#123;setTimeout(e, 1e3 / 60)&#125;, i(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;), n(), r()&#125;(window, document);</code></p>
+<ol start="2">
+<li>在配置文件中引入新建的js文件<br>在…\themes\hexo-theme-next\layout<em>路径下找到“_layout.swig”</em>文件，在<head></head>标签中引入新建的js文件，代码如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;love.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>上传hexo</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这样网站就能看到效果了。</p>
+<h3 id="自定义网页样式"><a href="#自定义网页样式" class="headerlink" title="自定义网页样式"></a>自定义网页样式</h3><p>全部自定义样式放到 hexo/source/_data/styles.styl 即可。</p>
+<p>然后在 NexT 的配置文件 next.yml 中取消 styles.styl 的注释：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line"></span><br><span class="line">-  #style: source&#x2F;_data&#x2F;styles.styl</span><br><span class="line">+  style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
+
+
+<p>这部分小牛参考的<a target="_blank" rel="noopener" href="https://blog.dlzhang.com/">班班</a>的样式，在此感谢！</p>
+<h3 id="添加Google广告"><a href="#添加Google广告" class="headerlink" title="添加Google广告"></a>添加Google广告</h3><ol>
+<li>注册 Google AdSense：</li>
+</ol>
+<p>google adsense注册账号流程比较简单，跟随页面提示填好各项信息，<a target="_blank" rel="noopener" href="https://www.google.com/adsense/">官网地址</a></p>
+<p>值得注意的是：<strong>网站域名一定要正确，不要轻易修改，不然后面修改网址（补救）会非常麻烦</strong>。</p>
+<ol start="2">
+<li>添加广告代码</li>
+</ol>
+<p>注册账号完成之后，google会生成一段代码。需要将谷歌提供给你的一份代码添加到你网站的中，我用的是next主题v7的版本，</p>
+<p>在 主题配置文件_config.yml中 中释放此段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  head: source&#x2F;_data&#x2F;head.swig</span><br></pre></td></tr></table></figure>
+
+<p>我们接着在 source/_data 中创建 head.swig 文件，并把 AdSense 产生的代码放在 head.swig 里面，就像这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script data-ad-client&#x3D;&quot;xxxxxxxxxxxxxxx&quot; async src&#x3D;&quot;https:&#x2F;&#x2F;pagead2.googlesyndication.com&#x2F;pagead&#x2F;js&#x2F;adsbygoogle.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>申请审核</li>
+</ol>
+<p>重新启动一下本地的 Hexo 环境，检查 <head></head> 标记中有没有出现刚才添加的代码。检查没有问题之后，就可以部署到生产环境使上面的修改生效了。为了保险起见，在生产环境上也要检查一下 <head></head> 标记中有没有出现刚才添加的代码。确认没有问题之后，就可以回到 AdSense 页面中点击验证按钮了。</p>
+<p>然后 AdSense 会开始审核阶段，这期间我们只需静静等待审核结果的邮件就好了（一般需要3-4天）</p>
+<p>注意：如果你的网站域名，填写错误。则需要在对错误域名申请时，等待<a target="_blank" rel="noopener" href="https://www.google.com/adsense">控制台</a>里的“<code>网站</code>”项，可以点击（大概需要2天的时间）。然后点击<code>添加网站</code>。添加之后，申请审核即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614073678437-image.png"></p>
+<p>这里值得注意的是：审核可能会一直通过不了（猜测可能默认会去错误网站查找代码），查了许久官方文档，惊喜发现google ad还提供了另一种 验证方式：</p>
+<p>##在 <a target="_blank" rel="noopener" href="https://search.google.com/search-console">Search Console </a>中验证网站所有权：</p>
+<p>在 Search Console 中验证网站所有权</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795770406-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795812121-image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612795906797-image.png"></p>
+<p>选择网域资源验证方式比较好，只需要一个域名就可以匹配到多种格式的 URL，之后会给你一个 TXT 的记录值，复制它到你域名DNS增加一个 TXT 记录，点击验证即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796043685-image.png"></p>
+<p>(小牛域名是在阿里云上买的，所以去阿里云上DNS里添加一下TXT记录即可)<br><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796346266-image.png"></p>
+<p>然后回到google站长网站上验证即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-8/1612796531839-image.png"></p>
+<p>这样就可以验证网站的所有权，google不需要在去网站上寻找广告代码。</p>
+<p>小牛前后申请了十几次才才成功，大家多点耐心。</p>
+<ol start="4">
+<li>配置广告模块<br>进入 AdSense 管理后台之后，进入侧边栏的广告 -&gt; 概览。在这里我们可以配置广告会在什么位置展示了。</li>
+</ol>
+<p>因为笔者并不希望让我的网站满地都是广告，而影响正常内容的展示，而是只在首页左侧边栏最下面，和在每篇博文结束的位置，各放置一个广告。所以我就需要到按广告单元这个页面手动配置两个广告模块。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614083799333-image.png"></p>
+<ol start="5">
+<li>添加广告模块</li>
+</ol>
+<p>点击展示广告按钮来新建一个类型为展示的广告。在顶部文本框填入广告模块的名字，比如 side ad，然后在右边栏选择广告的尺寸，是自适应的，还是固定长宽的。如果是自适应尺寸，那么还需要选择广告的大致形状。配置完毕后，点击保存按钮，一个广告模块就配置好了。我这里配置2个：side ad和 bottom ad 两个模块。</p>
+<ol start="6">
+<li>配置博客页面<br>广告模块是创建好了，接着需要配置广告展示的位置。</li>
+</ol>
+<p>修改 主题配置文件<code>_config.yml</code> 中 <code>custom_file_path</code> 的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">custom_file_path:</span><br><span class="line">  sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br><span class="line">  postBodyEnd: source&#x2F;_data&#x2F;post-body-end.swig</span><br></pre></td></tr></table></figure>
+
+
+<p>然后我们在 source/_data/ 目录新建两个文件，分别命名为 <code>sidebar.swig </code>和 <code>post-body-end.swig</code>，分别用来存放侧边栏广告和文章底部广告的代码。</p>
+<p>回到按广告单元这个页面，在刚才添加的广告单元那里，有一个形似 &lt;&gt; 的按钮，点击它，就可以看到这个广告单元的配置代码了。</p>
+<p>把 side ad 的代码复制到 sidebar.swig 中，来把这个侧边栏广告真正的放到侧边栏上。比如我的广告代码是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- side ad --&gt;</span><br><span class="line">&lt;ins class&#x3D;&quot;adsbygoogle&quot;</span><br><span class="line">     style&#x3D;&quot;display:block&quot;</span><br><span class="line">     data-ad-client&#x3D;&quot;████████████████████&quot;</span><br><span class="line">     data-ad-slot&#x3D;&quot;██████████&quot;</span><br><span class="line">     data-ad-format&#x3D;&quot;auto&quot;</span><br><span class="line">     data-full-width-responsive&#x3D;&quot;true&quot;&gt;&lt;&#x2F;ins&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">     window.addEventListener(&#39;load&#39;, function() &#123;</span><br><span class="line">          (adsbygoogle &#x3D; window.adsbygoogle || []).push(&#123;&#125;);</span><br><span class="line">     &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后把 bottom ad 的代码复制到 post-body-end.swig，来把这个广告放到文章底部。（本部分参考：<code>https://www.boris1993.com/others/hexo-next-enable-google-adsense.html</code>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- bottom ad --&gt;</span><br><span class="line">&lt;ins class&#x3D;&quot;adsbygoogle&quot;</span><br><span class="line">     style&#x3D;&quot;display:block&quot;</span><br><span class="line">     data-ad-client&#x3D;&quot;████████████████████&quot;</span><br><span class="line">     data-ad-slot&#x3D;&quot;██████████&quot;</span><br><span class="line">     data-ad-format&#x3D;&quot;auto&quot;</span><br><span class="line">     data-full-width-responsive&#x3D;&quot;true&quot;&gt;&lt;&#x2F;ins&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">     (adsbygoogle &#x3D; window.adsbygoogle || []).push(&#123;&#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样，广告就放置好了。接下来，把博客发布上去，就可以开始打广告了。</p>
+<h3 id="添加-Google-Adsense-ads-txt"><a href="#添加-Google-Adsense-ads-txt" class="headerlink" title="添加 Google Adsense ads.txt"></a>添加 Google Adsense ads.txt</h3><p>申请完 Google Adsense 后，需要将一段代码和一个 ads.txt 文件加入到博客中。前者比较好实现，按照官方教程进行即可。如果不添加后者，你的网站仍然可以展示广告，但是会收到如下警告：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614087965693-image.png"></p>
+<ol>
+<li>什么是 adx.txt 呢？</li>
+</ol>
+<blockquote>
+<p>根据 Google 官方的描述：</p>
+<p>授权数字卖家 (ads.txt) 是一项 IAB Tech Lab 计划，有助于确保只通过您认定的授权卖家（如 AdSense）销售您的数字广告资源。创建自己的 ads.txt 文件后，您可以更好地掌控允许谁在您的网站上销售广告，并可防止向广告客户展示仿冒广告资源。我们强烈建议您使用 ads.txt 文件。它可以帮助买家识别仿冒广告资源，并可以帮助您获得更多广告客户支出，而这些支出原本可能会流向仿冒广告资源。</p>
+</blockquote>
+<p>这个文件内容形式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0</span><br></pre></td></tr></table></figure>
+
+<p>我们不必太担心这个文件的内容，因为 Google 会帮你生成好，你下载即可。此外这个文件必须上传到网站根目录，<strong>就是说这个文件必须能够通过 your-website.com/ads.txt 访问到，其中 your-website.com 是你的主域名</strong>。</p>
+<p>那么对于基于 GitHub Page 的 hexo next 主题博客，如何添加呢？</p>
+<blockquote>
+<p>官方文档这样说：<br>将您的 ads.txt 文件上传到您网站的根目录。所谓网站的根目录，就是对应顶级域名的目录或文件夹 (example.com/ads.txt)。</p>
+<p>如果您要验证是否正确发布了文件，请使用网络浏览器访问 ads.txt 网址 (<a target="_blank" rel="noopener" href="https://example.com/ads.txt)%EF%BC%8C%E7%9C%8B%E7%9C%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E6%88%90%E5%8A%9F%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E3%80%82%E5%A6%82%E6%9E%9C%E5%8F%AF%E4%BB%A5%EF%BC%8C%E5%B0%B1%E8%AF%B4%E6%98%8E">https://example.com/ads.txt)，看看是否可以成功查看文件内容。如果可以，就说明</a> AdSense 可顺利找到该文件。</p>
+</blockquote>
+<ol start="2">
+<li>添加 ads.txt<br><code>直接将 ads.txt 放入 /hexo/soruce/ 目录下即可</code>。</li>
+</ol>
+<blockquote>
+<p>网上有的说放在根目录的 public 目录下面。。。殊不知 public 目录是不会上传的，这点已经在 hexo 文档上写明了，而且从 .gitignore 中也可以看出来</p>
+</blockquote>
+<ol start="3">
+<li>测试</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-2-23/1614089200278-image.png"></p>
+<p>最后友情提醒一下：别做一些刻意点击广告的行为，会被封~~</p>
+<h3 id="添加备案信息"><a href="#添加备案信息" class="headerlink" title="添加备案信息"></a>添加备案信息</h3><p>在主题配置文件中，搜索 “beian”，即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-11/1618153264281-image.png"></p>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-4-11/1618153913355-IMG_20210408_004616.jpg"></p>
+<p>由于小牛最近每天加班到凌晨，实在时间不够，本文拖了很久，修修改改。next7 评论系统始终得不到很好的解决，next7版本就更新于此，后续会修改错误疏漏，但不会再更新相关内容了，以后会抽空 使用next 8来重构本博客，发布的内容与next8有关。</p>
+<p>感谢大家的阅读，愿我的文章能为你们点燃思维的火花！</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903830568583176#heading-1">https://juejin.cn/post/6844903830568583176#heading-1</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Bottom Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6335519754868836"
+     data-ad-slot="6232297866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+          <div class="reward-container">
+  <div>请作者喝杯咖啡☕~</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442166560-image.png" alt="小牛呼噜噜 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610442122383-image.png" alt="小牛呼噜噜 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>小牛呼噜噜
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://xiaoniuhululu.com/2021/04/14/2021-04-13_hexo-next7-collect/" title="个人建站合集（hexo+ next7）">https://xiaoniuhululu.com/2021/04/14/2021-04-13_hexo-next7-collect/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://blog.csdn.net/qq_41603102">
+          <span class="icon">
+            <i class="fab fa-telegram"></i>
+          </span>
+
+          <span class="label">CSDN</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-1-12/1610443337569-qrcode_for_gh_da14b067e711_258.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/28/2021-03-27_hexo-website-7/" rel="prev" title="个人网站7-自定义图标支持">
+                  <i class="fa fa-chevron-left"></i> 个人网站7-自定义图标支持
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/22/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments"><div id="twikoo-comments"></div></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">苏ICP备2021011886号-1 </a>
+      <img src="https://cdn.jsdelivr.net/gh/zj827622690/MyBlogImageBed/2021-3-27/1616856436253-%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="display: inline-block;"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010402001118" rel="noopener" target="_blank">32010402001118 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小牛呼噜噜</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script>
+NexT.utils.loadComments('#twikoo-comments', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js', () => {
+    twikoo.init(Object.assign({"enable":true,"visitor":true,"envId":"comment-8grebgpd57d10560"}, {
+      el: '#twikoo-comments'
+    }));
+  }, window.twikoo);
+});
+</script>
+
+</body>
+</html>
