@@ -240,6 +240,7 @@
   }
 }
 .page-container .main-content-container {
+  display: none;
   padding-top: 70px;
   position: relative;
 }
@@ -341,6 +342,7 @@
   max-width: 1200px !important;
 }
 .page-container .main-content-container .main-content-body .main-content-footer {
+  display: none;
   width: 100%;
 }
 .page-container .post-tools {
